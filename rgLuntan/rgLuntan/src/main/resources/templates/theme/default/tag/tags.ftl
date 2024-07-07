@@ -8,14 +8,14 @@
                         <div class="row" style="overflow: hidden;">
                             <#list page.records as tag>
                                 <div class="col-md-3 tag-item">
-                                    <#if tag.icon??>
-                                        <img src="${tag.icon}" width="24" class="sponsor-tag-img" alt="${tag.name}">
-                                    </#if>
+<#--                                    <#if tag.icon??>-->
+<#--                                        <img src="${tag.icon}" width="10" class="sponsor-tag-img" alt="${tag.name}">-->
+<#--                                    </#if>-->
                                     <a href="/topic/tag/${tag.name}">
                                         <span class="badge badge-info">${tag.name}</span>
                                     </a>
-                                    <span class="text-muted">x ${tag.topicCount}</span>
-                                    <small class="excerpt text-muted" style="">${tag.description!}</small>
+<#--                                    <span class="text-muted">x ${tag.topicCount}</span>-->
+<#--                                    <small class="excerpt text-muted" style="">${tag.description!}</small>-->
                                 </div>
                             </#list>
                         </div>

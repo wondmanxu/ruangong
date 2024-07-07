@@ -1,6 +1,6 @@
 <#macro header page_tab>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">${site.name!}</a>
+        <a class="navbar-brand" href="/">选课论坛</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,11 +43,11 @@
                             <i class="fa fa-user"></i> ${_user.username}
                         </a>
                     </li>
-                    <li class="nav-item <#if page_tab == "settings">active</#if>">
-                        <a href="/settings" class="nav-link">
-                            <i class="fa fa-cog"></i> ${i18n.getMessage("setting")}
-                        </a>
-                    </li>
+<#--                    <li class="nav-item <#if page_tab == "settings">active</#if>">-->
+<#--                        <a href="/settings" class="nav-link">-->
+<#--                            <i class="fa fa-cog"></i> ${i18n.getMessage("setting")}-->
+<#--                        </a>-->
+<#--                    </li>-->
                     <li class="nav-item">
                         <a href="javascript:if(confirm('确定要登出吗？登出了就没办法发帖回帖了哦!'))window.location.href='/logout'"
                            class="nav-link">
