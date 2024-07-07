@@ -1,9 +1,9 @@
 <div class="card">
     <div class="card-body pb-2">
         <div class="media">
-            <a href="/user/${_user.username!}" class="mr-3">
-                <img src="${_user.avatar!}" title="${_user.username!}" class="avatar"/>
-            </a>
+<#--            <a href="/user/${_user.username!}" class="mr-3">-->
+<#--                <img src="${_user.avatar!}" title="${_user.username!}" class="avatar"/>-->
+<#--            </a>-->
             <div class="media-body">
                 <div>
                     <a href="/user/${_user.username!}">${_user.username!}</a>

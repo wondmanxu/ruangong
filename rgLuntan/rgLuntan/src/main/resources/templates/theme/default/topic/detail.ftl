@@ -42,9 +42,9 @@
                                 </#if>
                             </p>
                         </div>
-                        <div class="media-right">
-                            <img src="${topicUser.avatar!}" class="avatar avatar-lg"/>
-                        </div>
+<#--                        <div class="media-right">-->
+<#--                            <img src="${topicUser.avatar!}" class="avatar avatar-lg"/>-->
+<#--                        </div>-->
                     </div>
                 </div>
                 <div class="divide"></div>

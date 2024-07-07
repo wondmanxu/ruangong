@@ -5,13 +5,18 @@
 <#--            <a href="https://github.com/atjiu/pybbs" target="_blank">开源地址</a>&nbsp;|&nbsp;-->
 <#--            <a href="https://atjiu.github.io/pybbs/" target="_blank">文档地址</a>-->
 <#--            <span class="pull-right">-->
-<#--        <a href="/adminlogin" target="_blank">登录后台</a>&nbsp;|&nbsp;-->
+<#--        <a href="/adminlogin" target="_blank">登录后台</a>-->
 <#--        <a href="/changeLanguage?lang=zh">中文</a>&nbsp;|&nbsp;-->
 <#--        <a href="/changeLanguage?lang=en">English</a>-->
 <#--      </span>-->
 <#--        </p>-->
         <div>
             &copy;2024 计科软工10组
+            <span class="pull-right">
+                <a href="/adminlogin" target="_blank">登录后台</a>
+<#--                <a href="/changeLanguage?lang=zh">中文</a>&nbsp;|&nbsp;-->
+<#--                <a href="/changeLanguage?lang=en">English</a>-->
+              </span>
 <#--            <span class="pull-right">-->
 <#--        powered by <a href="https://github.com/atjiu/pybbs" target="_blank">pybbs</a>-->
 <#--      </span>-->

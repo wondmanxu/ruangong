@@ -5,15 +5,15 @@
             <div class="card">
                 <div class="card-body">
                     <div class="media">
-                        <img src="${user.avatar!}" class="mr-3 avatar avatar-lg" alt="avatar"/>
+<#--                        <img src="${user.avatar!}" class="mr-3 avatar avatar-lg" alt="avatar"/>-->
                         <div class="media-body">
                             <h3 style="margin-top: 0">${user.username!}</h3>
-                            <div>积分：<a href="/top100">${user.score}</a></div>
+<#--                            <div>积分：<a href="/top100">${user.score}</a></div>-->
                             <#if user.bio??>
                                 <div><i class="gray">${user.bio!}</i></div>
                             </#if>
-                            <div>收藏话题: <a href="/user/${user.username}/collects">${collectCount!0}</a></div>
-                            <div>入驻时间: ${model.formatDate(user.inTime)}</div>
+<#--                            <div>收藏话题: <a href="/user/${user.username}/collects">${collectCount!0}</a></div>-->
+<#--                            <div>入驻时间: ${model.formatDate(user.inTime)}</div>-->
                         </div>
                     </div>
                 </div>
@@ -41,11 +41,11 @@
             <#include "../components/user_comments.ftl"/>
             <@user_comments pageNo=1 pageSize=10 username=username isFooter=true/>
         </div>
-        <div class="col-md-3 hidden-xs">
-            <div class="card"><p></p></div>
-            <#if githubLogin??>
-                <#include "../components/github_repos.ftl"/>
-            </#if>
-        </div>
+<#--        <div class="col-md-3 hidden-xs">-->
+<#--            <div class="card"><p></p></div>-->
+<#--            <#if githubLogin??>-->
+<#--                <#include "../components/github_repos.ftl"/>-->
+<#--            </#if>-->
+<#--        </div>-->
     </div>
 </@html>

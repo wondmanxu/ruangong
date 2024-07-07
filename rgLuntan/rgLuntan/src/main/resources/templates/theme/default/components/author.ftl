@@ -4,9 +4,9 @@
     </div>
     <div class="card-body">
         <div class="media">
-            <a href="/user/${topicUser.username}" class="mr-3">
-                <img src="${topicUser.avatar!}" title="${topicUser.username}" class="avatar"/>
-            </a>
+<#--            <a href="/user/${topicUser.username}" class="mr-3">-->
+<#--                <img src="${topicUser.avatar!}" title="${topicUser.username}" class="avatar"/>-->
+<#--            </a>-->
             <div class="media-body">
                 <div class="media-heading">
                     <a href="/user/${topicUser.username!}">${topicUser.username}</a>
