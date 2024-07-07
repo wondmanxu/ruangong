@@ -60,17 +60,17 @@
                         </#list>
                     </div>
                 </div>
-                <#if _user??>
-                    <div class="card-footer">
-                        <a href="javascript:window.open('http://service.weibo.com/share/share.php?url=${site.base_url!}/topic/${topic.id}?r=${_user.username!}&title=${topic.title!?html}', '_blank', 'width=550,height=370'); recordOutboundLink(this, 'Share', 'weibo.com');">分享微博</a>&nbsp;
-                        <#if collect??>
-                            <a href="javascript:;" class="collectTopic">取消收藏</a>
-                        <#else>
-                            <a href="javascript:;" class="collectTopic">加入收藏</a>
-                        </#if>
-                        <span class="pull-right"><span id="collectCount">${collects?size}</span>个收藏</span>
-                    </div>
-                </#if>
+<#--                <#if _user??>-->
+<#--                    <div class="card-footer">-->
+<#--                        <a href="javascript:window.open('http://service.weibo.com/share/share.php?url=${site.base_url!}/topic/${topic.id}?r=${_user.username!}&title=${topic.title!?html}', '_blank', 'width=550,height=370'); recordOutboundLink(this, 'Share', 'weibo.com');">分享微博</a>&nbsp;-->
+<#--                        <#if collect??>-->
+<#--                            <a href="javascript:;" class="collectTopic">取消收藏</a>-->
+<#--                        <#else>-->
+<#--                            <a href="javascript:;" class="collectTopic">加入收藏</a>-->
+<#--                        </#if>-->
+<#--                        <span class="pull-right"><span id="collectCount">${collects?size}</span>个收藏</span>-->
+<#--                    </div>-->
+<#--                </#if>-->
             </div>
 
             <#--评论列表-->
@@ -84,7 +84,7 @@
                         <span class="pull-right">
                             <#if site?? && site.content_style?? && site.content_style == "MD">
                                 <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|
-                                <a href="javascript:uploadFile('video');">上传视频</a>&nbsp;|
+<#--                                <a href="javascript:uploadFile('video');">上传视频</a>&nbsp;|-->
                             </#if>
                             <a href="javascript:;" id="goTop">回到顶部</a>
                         </span>

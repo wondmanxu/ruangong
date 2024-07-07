@@ -27,11 +27,11 @@
                         <div class="form-group">
                             <a href="javascript:;;" id="login_btn" class="btn btn-dark btn-block">${i18n.getMessage("login")}</a>
                         </div>
-                        <div class="form-group">
-                            <#--                            <a href="javascript:;" id="forget_password_href" class="text-primary">${i18n.getMessage("forget_password")}</a>-->
-                            <#--                            |-->
-                            没有社区账号？<a href="/register" class="text-primary">${i18n.getMessage("register")}</a>
-                        </div>
+<#--                        <div class="form-group">-->
+<#--                            &lt;#&ndash;                            <a href="javascript:;" id="forget_password_href" class="text-primary">${i18n.getMessage("forget_password")}</a>&ndash;&gt;-->
+<#--                            &lt;#&ndash;                            |&ndash;&gt;-->
+<#--                            没有社区账号？<a href="/register" class="text-primary">${i18n.getMessage("register")}</a>-->
+<#--                        </div>-->
                     </form>
                     <@tag_social_list>
                         <#if socialList?? ||!model.isEmpty(site.sms_access_key_id!) >
