@@ -1,294 +1,675 @@
-2024-07-06 15:20:42 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on xushaojundeMacBook-Pro.local with PID 6125 (started by xushaojun in /Users/xushaojun/Desktop/大学/软工/课设/代码/pybbs-master)
-2024-07-06 15:20:42 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
-2024-07-06 15:20:42 [restartedMain] INFO  o.s.b.d.r.ChangeableUrls - The Class-Path manifest attribute in /Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/activation.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jsr173_1.0_api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb1-impl.jar
-2024-07-06 15:20:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-07-06 15:20:42 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-07-06 15:20:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$4ab6cdfa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$be25e104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$ce190318] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
-2024-07-06 15:20:43 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.f.c.i.l.VersionPrinter - Flyway Community Edition 5.2.1 by Boxfuse
-2024-07-06 15:20:43 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
-2024-07-06 15:20:43 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.045s)
-2024-07-06 15:20:43 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
-2024-07-06 15:20:43 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$272b6a6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$21f2cb02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$7b418917] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$58d63126] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:20:43 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1101 ms
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
-2024-07-06 15:20:43 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
-2024-07-06 15:20:44 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-07-06 15:20:44 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
-2024-07-06 15:20:44 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
-2024-07-06 15:20:44 [restartedMain] INFO  org.xnio - XNIO version 3.3.8.Final
-2024-07-06 15:20:44 [restartedMain] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
-2024-07-06 15:20:44 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
-2024-07-06 15:20:44 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 2.212 seconds (JVM running for 2.512)
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 7 ms
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:20:59 [XNIO-1 task-1] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=383ms
-2024-07-06 15:20:59 [XNIO-1 task-4] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/zzy/avatar.png|excitation=8ms
-2024-07-06 15:20:59 [XNIO-1 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/ybsy/avatar.jpeg|v=884519|excitation=8ms
-2024-07-06 15:20:59 [XNIO-1 task-6] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=9ms
-2024-07-06 15:20:59 [XNIO-1 task-3] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=10ms
-2024-07-06 15:20:59 [XNIO-1 task-2] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=10ms
-2024-07-06 15:20:59 [XNIO-1 task-4] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=9ms
-2024-07-06 15:20:59 [XNIO-1 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|v=884519|excitation=9ms
-2024-07-06 15:20:59 [XNIO-1 task-8] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/zzy/avatar.png|excitation=0ms
-2024-07-06 15:20:59 [XNIO-1 task-7] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/ybsy/avatar.jpeg|v=884519|excitation=0ms
-2024-07-06 15:20:59 [XNIO-1 task-9] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=0ms
-2024-07-06 15:20:59 [XNIO-1 task-7] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|v=884519|excitation=1ms
-2024-07-06 15:20:59 [XNIO-1 task-8] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=1ms
-2024-07-06 15:20:59 [XNIO-1 task-10] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:20:59 [XNIO-1 task-10] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:20:59 [XNIO-1 task-10] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720250459874|excitation=61ms
-2024-07-06 15:28:55 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-07-06 15:28:55 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-07-06 15:28:55 [Thread-9] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
-2024-07-06 15:28:55 [Thread-9] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
-2024-07-06 15:38:57 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on xushaojundeMacBook-Pro.local with PID 7301 (started by xushaojun in /Users/xushaojun/Desktop/大学/软工/课设/代码/rgLuntan)
-2024-07-06 15:38:57 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
-2024-07-06 15:38:57 [restartedMain] INFO  o.s.b.d.r.ChangeableUrls - The Class-Path manifest attribute in /Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/activation.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jsr173_1.0_api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb1-impl.jar
-2024-07-06 15:38:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-07-06 15:38:57 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-07-06 15:38:57 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$182d0b86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:46 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on xushaojundeMacBook-Pro.local with PID 7375 (started by xushaojun in /Users/xushaojun/Desktop/大学/软工/课设/代码/rgLuntan)
-2024-07-06 15:40:46 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
-2024-07-06 15:40:46 [restartedMain] INFO  o.s.b.d.r.ChangeableUrls - The Class-Path manifest attribute in /Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/activation.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jsr173_1.0_api.jar,file:/Users/xushaojun/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb1-impl.jar
-2024-07-06 15:40:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-07-06 15:40:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-07-06 15:40:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$8e762d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$1e5401a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$11d8622e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
-2024-07-06 15:40:47 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.f.c.i.l.VersionPrinter - Flyway Community Edition 5.2.1 by Boxfuse
-2024-07-06 15:40:47 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
-2024-07-06 15:40:47 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.045s)
-2024-07-06 15:40:47 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
-2024-07-06 15:40:47 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$6aeac985] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$65b22a18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$bf00e82d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$9c95903c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:40:47 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1071 ms
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
-2024-07-06 15:40:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
-2024-07-06 15:40:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-07-06 15:40:48 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
-2024-07-06 15:40:48 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
-2024-07-06 15:40:48 [restartedMain] INFO  org.xnio - XNIO version 3.3.8.Final
-2024-07-06 15:40:48 [restartedMain] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
-2024-07-06 15:40:48 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
-2024-07-06 15:40:48 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 2.184 seconds (JVM running for 2.48)
-2024-07-06 15:41:01 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-07-06 15:41:01 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-07-06 15:41:01 [Thread-9] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
-2024-07-06 15:41:01 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on xushaojundeMacBook-Pro.local with PID 7375 (started by xushaojun in /Users/xushaojun/Desktop/大学/软工/课设/代码/rgLuntan)
-2024-07-06 15:41:01 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$8e762d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$1e5401a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$11d8622e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Starting...
-2024-07-06 15:41:01 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Start completed.
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
-2024-07-06 15:41:01 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.029s)
-2024-07-06 15:41:01 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
-2024-07-06 15:41:01 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$6aeac985] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$65b22a18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$bf00e82d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy133] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy134] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy135] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy136] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy137] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$9c95903c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2024-07-06 15:41:01 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
-2024-07-06 15:41:01 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 455 ms
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
-2024-07-06 15:41:02 [restartedMain] INFO  freemarker.beans - Detected multiple classes with the same name, "rgLuntan.util.BaseModel". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-07-06 15:41:02 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
-2024-07-06 15:41:02 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
-2024-07-06 15:41:02 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 1.102 seconds (JVM running for 16.457)
-2024-07-06 15:41:02 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2024-07-06 15:41:05 [XNIO-2 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-06 15:41:05 [XNIO-2 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-07-06 15:41:05 [XNIO-2 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 9 ms
-2024-07-06 15:41:05 [XNIO-2 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:05 [XNIO-2 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:06 [XNIO-2 task-1] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=338ms
-2024-07-06 15:41:06 [XNIO-2 task-3] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=4ms
-2024-07-06 15:41:06 [XNIO-2 task-2] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=4ms
-2024-07-06 15:41:06 [XNIO-2 task-4] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=4ms
-2024-07-06 15:41:06 [XNIO-2 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/zzy/avatar.png|excitation=2ms
-2024-07-06 15:41:06 [XNIO-2 task-6] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/ybsy/avatar.jpeg|v=884519|excitation=2ms
-2024-07-06 15:41:06 [XNIO-2 task-7] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=0ms
-2024-07-06 15:41:06 [XNIO-2 task-6] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|v=884519|excitation=10ms
-2024-07-06 15:41:06 [XNIO-2 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=10ms
-2024-07-06 15:41:06 [XNIO-2 task-8] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:06 [XNIO-2 task-8] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:06 [XNIO-2 task-8] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251666078|excitation=57ms
-2024-07-06 15:41:12 [XNIO-2 task-9] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=159ms
-2024-07-06 15:41:12 [XNIO-2 task-11] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-12] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-10] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=0ms
-2024-07-06 15:41:12 [XNIO-2 task-14] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/ybsy/avatar.jpeg|v=884519|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-13] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/zzy/avatar.png|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-13] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-14] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|v=884519|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-15] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=1ms
-2024-07-06 15:41:12 [XNIO-2 task-16] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:12 [XNIO-2 task-16] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:12 [XNIO-2 task-16] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251672192|excitation=55ms
-2024-07-06 15:41:46 [XNIO-2 task-17] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/notifications|excitation=65ms
-2024-07-06 15:41:46 [XNIO-2 task-20] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=0ms
-2024-07-06 15:41:46 [XNIO-2 task-18] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=0ms
-2024-07-06 15:41:46 [XNIO-2 task-19] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=0ms
-2024-07-06 15:41:46 [XNIO-2 task-22] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=1ms
-2024-07-06 15:41:46 [XNIO-2 task-21] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:46 [XNIO-2 task-21] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:46 [XNIO-2 task-21] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251706320|excitation=64ms
-2024-07-06 15:41:47 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:47 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-23] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-23] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/user/xushaoj|excitation=279ms
-2024-07-06 15:41:48 [XNIO-2 task-24] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-24] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:48 [XNIO-2 task-24] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251708211|excitation=70ms
-2024-07-06 15:41:52 [XNIO-2 task-25] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:52 [XNIO-2 task-25] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:52 [XNIO-2 task-25] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/settings|excitation=94ms
-2024-07-06 15:41:52 [XNIO-2 task-28] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=1ms
-2024-07-06 15:41:52 [XNIO-2 task-27] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=1ms
-2024-07-06 15:41:52 [XNIO-2 task-26] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=1ms
-2024-07-06 15:41:52 [XNIO-2 task-29] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=1ms
-2024-07-06 15:41:52 [XNIO-2 task-30] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:52 [XNIO-2 task-30] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:41:52 [XNIO-2 task-30] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251712915|excitation=59ms
-2024-07-06 15:42:01 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:01 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-31] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-31] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/user/xushaoj|excitation=233ms
-2024-07-06 15:42:02 [XNIO-2 task-32] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/layer.js|excitation=1ms
-2024-07-06 15:42:02 [XNIO-2 task-33] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/css/app.css|excitation=1ms
-2024-07-06 15:42:02 [XNIO-2 task-34] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/js/app.js|excitation=0ms
-2024-07-06 15:42:02 [XNIO-2 task-35] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/theme/default/libs/layer/theme/default/layer.css|v=3.1.1|excitation=1ms
-2024-07-06 15:42:02 [XNIO-2 task-36] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-36] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:02 [XNIO-2 task-36] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251722175|excitation=68ms
-2024-07-06 15:42:03 [XNIO-2 task-37] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/notifications|excitation=43ms
-2024-07-06 15:42:03 [XNIO-2 task-38] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:03 [XNIO-2 task-38] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:03 [XNIO-2 task-38] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251723419|excitation=58ms
-2024-07-06 15:42:06 [XNIO-2 task-39] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=136ms
-2024-07-06 15:42:06 [XNIO-2 task-40] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/zzy/avatar.png|excitation=1ms
-2024-07-06 15:42:06 [XNIO-2 task-41] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/static/upload/avatar/ybsy/avatar.jpeg|v=884519|excitation=1ms
-2024-07-06 15:42:06 [XNIO-2 task-40] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=1ms
-2024-07-06 15:42:06 [XNIO-2 task-41] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|v=884519|excitation=1ms
-2024-07-06 15:42:06 [XNIO-2 task-42] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:06 [XNIO-2 task-42] INFO  r.p.RedisService - redis配置信息不全或没有配置...
-2024-07-06 15:42:06 [XNIO-2 task-42] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720251726355|excitation=63ms
-2024-07-06 15:42:40 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
-2024-07-06 15:42:40 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
-2024-07-06 15:42:40 [SpringContextShutdownHook] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
-2024-07-06 15:42:40 [SpringContextShutdownHook] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:11:53 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 19040 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:11:53 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:11:53 [restartedMain] INFO  o.s.b.d.r.ChangeableUrls - The Class-Path manifest attribute in C:\Users\18309509590\.m2\repository\com\sun\xml\bind\jaxb-impl\2.1\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-api.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/activation.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jsr173_1.0_api.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb1-impl.jar
+2024-07-06 16:11:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-06 16:11:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$28d9f08e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$9c490398] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$ac3c25ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-07-06 16:11:54 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.f.c.i.l.VersionPrinter - Flyway Community Edition 5.2.1 by Boxfuse
+2024-07-06 16:11:54 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
+2024-07-06 16:11:54 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.057s)
+2024-07-06 16:11:54 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
+2024-07-06 16:11:54 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$54e8d03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$15ed96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$5964abab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:54 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$36f953ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:55 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:11:56 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:11:56 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 2329 ms
+2024-07-06 16:11:56 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
+2024-07-06 16:11:56 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
+2024-07-06 16:11:56 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
+2024-07-06 16:11:56 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
+2024-07-06 16:11:57 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:11:57 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
+2024-07-06 16:11:57 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:11:57 [restartedMain] INFO  org.xnio - XNIO version 3.3.8.Final
+2024-07-06 16:11:57 [restartedMain] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
+2024-07-06 16:11:57 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:11:57 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 3.951 seconds (JVM running for 5.123)
+2024-07-06 16:12:00 [XNIO-1 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-06 16:12:00 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-06 16:12:00 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 6 ms
+2024-07-06 16:12:00 [Thread-6] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-06 16:12:00 [Thread-6] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-06 16:12:00 [Thread-6] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-06 16:12:00 [Thread-6] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:12:01 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 19040 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:12:01 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:12:01 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:12:01 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 189 ms
+2024-07-06 16:12:01 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-06 16:12:01 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:12:01 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:12:01 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:12:01 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 0.348 seconds (JVM running for 8.953)
+2024-07-06 16:12:01 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   MybatisPlusAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'org.apache.ibatis.session.SqlSessionFactory', 'org.mybatis.spring.SqlSessionFactoryBean' (OnClassCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans of type org.springframework.transaction.TransactionManager (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration:
+      Did not match:
+         - Ancestor org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+      Matched:
+         - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#localeResolver:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.locale) did not find property 'locale' (OnPropertyCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-07-06 16:12:01 [XNIO-2 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-06 16:12:01 [XNIO-2 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-06 16:12:01 [XNIO-2 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-07-06 16:12:05 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-06 16:12:05 [Thread-8] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-06 16:12:05 [Thread-8] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:12:05 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 19040 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:12:05 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$28d9f08e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$9c490398] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$ac3c25ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Starting...
+2024-07-06 16:12:05 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
+2024-07-06 16:12:05 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.040s)
+2024-07-06 16:12:05 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
+2024-07-06 16:12:05 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$54e8d03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$15ed96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$5964abab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy134] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy135] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy136] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy137] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy138] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$36f953ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:12:06 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:12:06 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 745 ms
+2024-07-06 16:12:06 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
+2024-07-06 16:12:06 [restartedMain] INFO  freemarker.beans - Detected multiple classes with the same name, "rgLuntan.util.BaseModel". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+2024-07-06 16:12:06 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
+2024-07-06 16:12:06 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
+2024-07-06 16:12:06 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
+2024-07-06 16:12:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:12:07 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
+2024-07-06 16:12:07 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:12:07 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:12:07 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 1.758 seconds (JVM running for 14.705)
+2024-07-06 16:12:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration matched:
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration#transactionManager matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.apache.ibatis.session.SqlSessionFactory', 'org.mybatis.spring.SqlSessionFactoryBean' (OnClassCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration#sqlSessionTemplate matched:
+      - @ConditionalOnBean (types: org.mybatis.spring.SqlSessionTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a primary bean from beans 'jdbcTemplate'; @ConditionalOnBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ShiroConfig#defaultAdvisorAutoProxyCreator matched:
+      - @ConditionalOnBean (types: org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a primary bean from beans 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   MybatisPlusAutoConfiguration#sqlSessionFactory:
+      Did not match:
+         - @ConditionalOnBean (types: org.apache.ibatis.session.SqlSessionFactory; SearchStrategy: all) found beans of type 'org.apache.ibatis.session.SqlSessionFactory' mybatisSqlSession (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration.MapperScannerRegistrarNotFoundConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.mybatis.spring.mapper.MapperFactoryBean; SearchStrategy: all) found beans of type 'org.mybatis.spring.mapper.MapperFactoryBean' &adminUserMapper, &codeMapper, &collectMapper, &commentMapper, &notificationMapper, &OAuthUserMapper, &permissionMapper, &roleMapper, &rolePermissionMapper, &sensitiveWordMapper, &systemConfigMapper, &tagMapper, &topicMapper, &topicTagMapper, &userMapper (OnBeanCondition)
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' webMvcConfig (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 8 ms
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:32 [XNIO-3 task-1] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=443ms
+2024-07-06 16:12:32 [XNIO-3 task-2] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:32 [XNIO-3 task-2] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:32 [XNIO-3 task-2] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253552472|excitation=70ms
+2024-07-06 16:12:39 [XNIO-3 task-3] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/create|excitation=45ms
+2024-07-06 16:12:39 [XNIO-3 task-3] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=9ms
+2024-07-06 16:12:42 [XNIO-3 task-4] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:42 [XNIO-3 task-4] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:42 [XNIO-3 task-4] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253562836|excitation=62ms
+2024-07-06 16:12:45 [XNIO-3 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/tags|excitation=40ms
+2024-07-06 16:12:45 [XNIO-3 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:45 [XNIO-3 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:45 [XNIO-3 task-6] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253565480|excitation=48ms
+2024-07-06 16:12:46 [XNIO-3 task-7] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=120ms
+2024-07-06 16:12:46 [XNIO-3 task-8] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:46 [XNIO-3 task-8] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:12:47 [XNIO-3 task-8] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253566959|excitation=52ms
+2024-07-06 16:12:48 [XNIO-3 task-9] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/adminlogin|excitation=21ms
+2024-07-06 16:12:48 [XNIO-3 task-10] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/common/captcha|excitation=67ms
+2024-07-06 16:12:58 [XNIO-3 task-11] INFO  r.c.r.MyShiroRealm - 用户：admin 正在登录...
+2024-07-06 16:12:58 [XNIO-3 task-11] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/admin/login|password=123123|code=9G2Y|rememberMe=1|username=admin|excitation=106ms
+2024-07-06 16:12:59 [XNIO-3 task-12] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/admin/index|excitation=1340ms
+2024-07-06 16:13:01 [XNIO-3 task-13] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/admin/tag/list|excitation=249ms
+2024-07-06 16:13:08 [XNIO-3 task-14] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/admin/tag/list|newTags=AAA|name=|excitation=324ms
+2024-07-06 16:13:12 [XNIO-3 task-15] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/tags|excitation=26ms
+2024-07-06 16:13:12 [XNIO-3 task-16] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:12 [XNIO-3 task-16] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:12 [XNIO-3 task-16] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253592922|excitation=49ms
+2024-07-06 16:13:19 [XNIO-3 task-17] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=127ms
+2024-07-06 16:13:19 [XNIO-3 task-18] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:19 [XNIO-3 task-18] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:19 [XNIO-3 task-18] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253599689|excitation=51ms
+2024-07-06 16:13:30 [XNIO-3 task-19] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/tags|excitation=26ms
+2024-07-06 16:13:30 [XNIO-3 task-20] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:30 [XNIO-3 task-20] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:30 [XNIO-3 task-20] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253610497|excitation=63ms
+2024-07-06 16:13:33 [XNIO-3 task-21] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/tag/456|excitation=50ms
+2024-07-06 16:13:34 [XNIO-3 task-22] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:34 [XNIO-3 task-22] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:34 [XNIO-3 task-22] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253614004|excitation=54ms
+2024-07-06 16:13:35 [XNIO-3 task-23] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=115ms
+2024-07-06 16:13:35 [XNIO-3 task-24] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:35 [XNIO-3 task-24] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:13:35 [XNIO-3 task-24] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253615110|excitation=51ms
+2024-07-06 16:13:35 [XNIO-3 task-25] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/create|excitation=19ms
+2024-07-06 16:13:35 [XNIO-3 task-25] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/error|excitation=13ms
+2024-07-06 16:14:26 [Thread-12] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-07-06 16:14:26 [Thread-12] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-07-06 16:14:26 [Thread-12] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-06 16:14:26 [Thread-12] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:14:29 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 19040 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:14:29 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$28d9f08e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$9c490398] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$ac3c25ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Starting...
+2024-07-06 16:14:29 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Start completed.
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
+2024-07-06 16:14:29 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.057s)
+2024-07-06 16:14:29 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
+2024-07-06 16:14:29 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$54e8d03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$15ed96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$5964abab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy160] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy161] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy162] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy163] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy164] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$36f953ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:14:29 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:14:29 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 726 ms
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
+2024-07-06 16:14:30 [restartedMain] INFO  freemarker.beans - Detected multiple classes with the same name, "rgLuntan.util.BaseModel". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:14:30 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
+2024-07-06 16:14:30 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:14:30 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 1.586 seconds (JVM running for 158.387)
+2024-07-06 16:14:30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration matched:
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration#transactionManager matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MessageSourceAutoConfiguration matched:
+      - ResourceBundle found bundle URL [file:/E:/BJUT/RUANGONG/rgLuntan/rgLuntan/target/classes/i18n/message.properties] (MessageSourceAutoConfiguration.ResourceBundleCondition)
+      - @ConditionalOnBean (names: messageSource; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.apache.ibatis.session.SqlSessionFactory', 'org.mybatis.spring.SqlSessionFactoryBean' (OnClassCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found a primary bean from beans 'dataSource' (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration#sqlSessionTemplate matched:
+      - @ConditionalOnBean (types: org.mybatis.spring.SqlSessionTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a primary bean from beans 'jdbcTemplate'; @ConditionalOnBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ShiroConfig#defaultAdvisorAutoProxyCreator matched:
+      - @ConditionalOnBean (types: org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a primary bean from beans 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   MybatisPlusAutoConfiguration#sqlSessionFactory:
+      Did not match:
+         - @ConditionalOnBean (types: org.apache.ibatis.session.SqlSessionFactory; SearchStrategy: all) found beans of type 'org.apache.ibatis.session.SqlSessionFactory' mybatisSqlSession (OnBeanCondition)
+
+   MybatisPlusAutoConfiguration.MapperScannerRegistrarNotFoundConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.mybatis.spring.mapper.MapperFactoryBean; SearchStrategy: all) found beans of type 'org.mybatis.spring.mapper.MapperFactoryBean' &adminUserMapper, &codeMapper, &collectMapper, &commentMapper, &notificationMapper, &OAuthUserMapper, &permissionMapper, &roleMapper, &rolePermissionMapper, &sensitiveWordMapper, &systemConfigMapper, &tagMapper, &topicMapper, &topicTagMapper, &userMapper (OnBeanCondition)
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' webMvcConfig (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-07-06 16:15:45 [Thread-20] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-07-06 16:15:45 [Thread-20] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-07-06 16:15:45 [Thread-20] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:15:46 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 19040 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:15:46 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$28d9f08e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$9c490398] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$ac3c25ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-4 - Starting...
+2024-07-06 16:15:46 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-4 - Start completed.
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
+2024-07-06 16:15:46 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.038s)
+2024-07-06 16:15:46 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
+2024-07-06 16:15:46 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$54e8d03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$15ed96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$5964abab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy181] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy182] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy183] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy184] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$36f953ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:15:46 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:15:46 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 733 ms
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
+2024-07-06 16:15:47 [restartedMain] INFO  freemarker.beans - Detected multiple classes with the same name, "rgLuntan.util.BaseModel". Assuming it was a class-reloading. Clearing class introspection caches to release old data.
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:15:47 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
+2024-07-06 16:15:47 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:15:47 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 1.596 seconds (JVM running for 235.285)
+2024-07-06 16:15:47 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-07-06 16:15:49 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-07-06 16:15:49 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-07-06 16:15:49 [SpringContextShutdownHook] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
+2024-07-06 16:16:14 [restartedMain] INFO  r.RgLuntanApplication - Starting RgLuntanApplication on LAPTOP-RRV3NO87 with PID 6864 (E:\BJUT\RUANGONG\rgLuntan\rgLuntan\target\classes started by 18309509590 in E:\BJUT\RUANGONG\rgLuntan)
+2024-07-06 16:16:14 [restartedMain] INFO  r.RgLuntanApplication - The following profiles are active: dev
+2024-07-06 16:16:14 [restartedMain] INFO  o.s.b.d.r.ChangeableUrls - The Class-Path manifest attribute in C:\Users\18309509590\.m2\repository\com\sun\xml\bind\jaxb-impl\2.1\jaxb-impl-2.1.jar referenced one or more files that do not exist: file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb-api.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/activation.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jsr173_1.0_api.jar,file:/C:/Users/18309509590/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1/jaxb1-impl.jar
+2024-07-06 16:16:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-06 16:16:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'siteConfig' of type [rgLuntan.config.SiteConfig$$EnhancerBySpringCGLIB$$89a0d96c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceHelper' of type [rgLuntan.config.DataSourceHelper$$EnhancerBySpringCGLIB$$fd0fec76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSourceConfig' of type [rgLuntan.config.DataSourceConfig$$EnhancerBySpringCGLIB$$d030e8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-07-06 16:16:15 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.f.c.i.l.VersionPrinter - Flyway Community Edition 5.2.1 by Boxfuse
+2024-07-06 16:16:15 [restartedMain] INFO  o.f.c.i.d.DatabaseFactory - Database: jdbc:mysql://8.140.205.210:3306/pybbs (MySQL 8.0)
+2024-07-06 16:16:15 [restartedMain] INFO  o.f.c.i.c.DbValidate - Successfully validated 19 migrations (execution time 00:00.054s)
+2024-07-06 16:16:15 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Current version of schema `pybbs`: 1.18
+2024-07-06 16:16:15 [restartedMain] INFO  o.f.c.i.c.DbMigrate - Schema `pybbs` is up to date. No migration necessary.
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'flywayConfig' of type [rgLuntan.config.FlywayConfig$$EnhancerBySpringCGLIB$$661575e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisPlusConfig' of type [rgLuntan.config.MybatisPlusConfig$$EnhancerBySpringCGLIB$$60dcd674] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisSqlSession' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$ba2b9489] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserMapper' of type [com.sun.proxy.$Proxy73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserService' of type [rgLuntan.service.impl.AdminUserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionMapper' of type [com.sun.proxy.$Proxy75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rolePermissionService' of type [rgLuntan.service.impl.RolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionMapper' of type [com.sun.proxy.$Proxy76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'permissionService' of type [rgLuntan.service.impl.PermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'roleService' of type [rgLuntan.service.impl.RoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:15 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myShiroRealm' of type [rgLuntan.config.realm.MyShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigMapper' of type [com.sun.proxy.$Proxy78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'systemConfigService' of type [rgLuntan.service.impl.SystemConfigService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [rgLuntan.config.ShiroConfig$$EnhancerBySpringCGLIB$$97c03c98] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'myCredentialsMatcher' of type [rgLuntan.config.realm.MyCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  r.config.ShiroConfig - 开始配置shiroFilter...
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-06 16:16:17 [restartedMain] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-07-06 16:16:17 [restartedMain] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 2167 ms
+2024-07-06 16:16:17 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker全局变量...
+2024-07-06 16:16:17 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker全局变量配置完成!
+2024-07-06 16:16:17 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - 开始配置freemarker自定义标签...
+2024-07-06 16:16:17 [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfig - freemarker自定义标签配置完成!
+2024-07-06 16:16:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-06 16:16:18 [restartedMain] INFO  i.u.websockets.jsr - UT026003: Adding annotated server endpoint class rgLuntan.config.websocket.MyWebSocket for path /websocket
+2024-07-06 16:16:18 [restartedMain] INFO  io.undertow - starting server: Undertow - 2.0.28.Final
+2024-07-06 16:16:18 [restartedMain] INFO  org.xnio - XNIO version 3.3.8.Final
+2024-07-06 16:16:18 [restartedMain] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
+2024-07-06 16:16:18 [restartedMain] INFO  o.s.b.w.e.u.UndertowServletWebServer - Undertow started on port(s) 8080 (http) with context path ''
+2024-07-06 16:16:18 [restartedMain] INFO  r.RgLuntanApplication - Started RgLuntanApplication in 3.759 seconds (JVM running for 4.901)
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 8 ms
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:25 [XNIO-1 task-1] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=421ms
+2024-07-06 16:16:25 [XNIO-1 task-2] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:25 [XNIO-1 task-2] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:25 [XNIO-1 task-2] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253785500|excitation=70ms
+2024-07-06 16:16:26 [XNIO-1 task-3] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/create|excitation=55ms
+2024-07-06 16:16:26 [XNIO-1 task-4] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:26 [XNIO-1 task-4] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:26 [XNIO-1 task-4] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253786774|excitation=52ms
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:36 [XNIO-1 task-5] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/topic|excitation=252ms
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-6] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/16|excitation=300ms
+2024-07-06 16:16:37 [XNIO-1 task-7] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-7] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:37 [XNIO-1 task-7] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253797770|excitation=52ms
+2024-07-06 16:16:39 [XNIO-1 task-8] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=125ms
+2024-07-06 16:16:39 [XNIO-1 task-9] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:39 [XNIO-1 task-9] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:39 [XNIO-1 task-9] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253799462|excitation=47ms
+2024-07-06 16:16:42 [XNIO-1 task-10] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/tags|excitation=31ms
+2024-07-06 16:16:42 [XNIO-1 task-11] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:42 [XNIO-1 task-11] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:42 [XNIO-1 task-11] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253802375|excitation=52ms
+2024-07-06 16:16:48 [XNIO-1 task-12] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/topic/tag/%E5%96%9C%E6%8A%A5|excitation=54ms
+2024-07-06 16:16:48 [XNIO-1 task-13] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:48 [XNIO-1 task-13] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:48 [XNIO-1 task-13] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253808112|excitation=50ms
+2024-07-06 16:16:56 [XNIO-1 task-14] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/tags|excitation=28ms
+2024-07-06 16:16:56 [XNIO-1 task-15] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:56 [XNIO-1 task-15] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:56 [XNIO-1 task-15] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253816364|excitation=57ms
+2024-07-06 16:16:57 [XNIO-1 task-16] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/|excitation=123ms
+2024-07-06 16:16:57 [XNIO-1 task-17] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:57 [XNIO-1 task-17] INFO  r.p.RedisService - redis配置信息不全或没有配置...
+2024-07-06 16:16:57 [XNIO-1 task-17] INFO  r.i.CommonInterceptor - 0:0:0:0:0:0:0:1|/api/notification/notRead|_=1720253817792|excitation=49ms
+2024-07-06 16:17:41 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-07-06 16:17:41 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-07-06 16:17:41 [SpringContextShutdownHook] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-06 16:17:41 [SpringContextShutdownHook] INFO  io.undertow - stopping server: Undertow - 2.0.28.Final
