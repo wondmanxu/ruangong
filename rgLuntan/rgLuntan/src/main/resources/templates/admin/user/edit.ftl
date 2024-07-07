@@ -30,29 +30,29 @@
                         <input type="password" id="password" name="password" value="" class="form-control"
                                placeholder="密码(为空不修改)"/>
                     </div>
-                    <div class="form-group">
-                        <label>积分</label>
-                        <input type="number" pattern="\d" id="score" name="score" value="${user.score!0}"
-                               class="form-control"
-                               placeholder="积分"/>
-                    </div>
+<#--                    <div class="form-group">-->
+<#--                        <label>积分</label>-->
+<#--                        <input type="number" pattern="\d" id="score" name="score" value="${user.score!0}"-->
+<#--                               class="form-control"-->
+<#--                               placeholder="积分"/>-->
+<#--                    </div>-->
                     <div class="form-group">
                         <label>邮箱</label>
                         <input type="email" id="email" name="email" value="${user.email!}" class="form-control"
                                placeholder="邮箱"/>
                     </div>
-                    <div class="form-group">
-                        <label>githubName</label>
-                        <input type="text" id="githubName" name="githubName" value="${user.githubName!}"
-                               class="form-control"
-                               placeholder="githubName"/>
-                    </div>
-                    <div class="form-group">
-                        <label>telegramName</label>
-                        <input type="text" id="telegramName" name="telegramName" value="${user.telegramName!}"
-                               class="form-control"
-                               placeholder="telegramName"/>
-                    </div>
+<#--                    <div class="form-group">-->
+<#--                        <label>githubName</label>-->
+<#--                        <input type="text" id="githubName" name="githubName" value="${user.githubName!}"-->
+<#--                               class="form-control"-->
+<#--                               placeholder="githubName"/>-->
+<#--                    </div>-->
+<#--                    <div class="form-group">-->
+<#--                        <label>telegramName</label>-->
+<#--                        <input type="text" id="telegramName" name="telegramName" value="${user.telegramName!}"-->
+<#--                               class="form-control"-->
+<#--                               placeholder="telegramName"/>-->
+<#--                    </div>-->
                     <div class="form-group">
                         <label>个人主页</label>
                         <input type="text" id="website" name="website" value="${user.website!}" class="form-control"

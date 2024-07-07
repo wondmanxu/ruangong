@@ -56,7 +56,7 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>图标</th>
+<#--                        <th>图标</th>-->
                         <th>名称</th>
                         <th>话题数</th>
                         <th>操作</th>
@@ -66,7 +66,7 @@
                     <#list page.records as tag>
                         <tr>
                             <td>${tag.id}</td>
-                            <td><img src="${tag.icon!}" width="30" alt=""></td>
+<#--                            <td><img src="${tag.icon!}" width="30" alt=""></td>-->
                             <td><a href="/topic/tag/${tag.name!}" target="_blank">${tag.name!}</a></td>
                             <td>${tag.topicCount!0}</td>
                             <td>

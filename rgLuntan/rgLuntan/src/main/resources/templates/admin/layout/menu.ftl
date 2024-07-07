@@ -14,14 +14,14 @@
                     </div>
                 </div>
                 <li class="header">MAIN NAVIGATION</li>
-                <#if sec.hasPermission('index:index')>
-                    <li <#if page_tab=='index'>class="active"</#if>>
-                        <a href="/admin/index">
-                            <i class="fa fa-dashboard"></i>
-                            <span>${i18n.getMessage("admin.dashboard")}</span>
-                        </a>
-                    </li>
-                </#if>
+<#--                <#if sec.hasPermission('index:index')>-->
+<#--                    <li <#if page_tab=='index'>class="active"</#if>>-->
+<#--                        <a href="/admin/index">-->
+<#--                            <i class="fa fa-dashboard"></i>-->
+<#--                            <span>${i18n.getMessage("admin.dashboard")}</span>-->
+<#--                        </a>-->
+<#--                    </li>-->
+<#--                </#if>-->
                 <#if sec.hasPermission('topic:list')>
                     <li <#if page_tab=='topic'>class="active"</#if>>
                         <a href="/admin/topic/list">
@@ -46,14 +46,14 @@
                         </a>
                     </li>
                 </#if>
-                <#if sec.hasPermission('sensitive_word:list')>
-                    <li <#if page_tab=='sensitive_word'>class="active"</#if>>
-                        <a href="/admin/sensitive_word/list">
-                            <i class="fa fa-filter"></i>
-                            <span>${i18n.getMessage("admin.sensitive_word")}</span>
-                        </a>
-                    </li>
-                </#if>
+<#--                <#if sec.hasPermission('sensitive_word:list')>-->
+<#--                    <li <#if page_tab=='sensitive_word'>class="active"</#if>>-->
+<#--                        <a href="/admin/sensitive_word/list">-->
+<#--                            <i class="fa fa-filter"></i>-->
+<#--                            <span>${i18n.getMessage("admin.sensitive_word")}</span>-->
+<#--                        </a>-->
+<#--                    </li>-->
+<#--                </#if>-->
                 <#if sec.hasPermission('user:list')>
                     <li <#if page_tab=='user'>class="active"</#if>>
                         <a href="/admin/user/list">
@@ -87,25 +87,25 @@
                                     </a>
                                 </li>
                             </#if>
-                            <#if sec.hasPermission('permission:list')>
-                                <li <#if page_tab=='auth_permission'>class="active"</#if>>
-                                    <a href="/admin/permission/list">
-                                        <i class="fa fa-circle-o"></i>
-                                        ${i18n.getMessage("admin.permissions")}
-                                    </a>
-                                </li>
-                            </#if>
+<#--                            <#if sec.hasPermission('permission:list')>-->
+<#--                                <li <#if page_tab=='auth_permission'>class="active"</#if>>-->
+<#--                                    <a href="/admin/permission/list">-->
+<#--                                        <i class="fa fa-circle-o"></i>-->
+<#--                                        ${i18n.getMessage("admin.permissions")}-->
+<#--                                    </a>-->
+<#--                                </li>-->
+<#--                            </#if>-->
                         </ul>
                     </li>
                 </#if>
-                <#if sec.hasPermission('system:edit')>
-                    <li <#if page_tab=='system'>class="active"</#if>>
-                        <a href="/admin/system/edit">
-                            <i class="fa fa-cogs"></i>
-                            <span>${i18n.getMessage("admin.system_config")}</span>
-                        </a>
-                    </li>
-                </#if>
+<#--                <#if sec.hasPermission('system:edit')>-->
+<#--                    <li <#if page_tab=='system'>class="active"</#if>>-->
+<#--                        <a href="/admin/system/edit">-->
+<#--                            <i class="fa fa-cogs"></i>-->
+<#--                            <span>${i18n.getMessage("admin.system_config")}</span>-->
+<#--                        </a>-->
+<#--                    </li>-->
+<#--                </#if>-->
                 <li>
                     <a href="/admin/logout">
                         <i class="fa fa-sign-out"></i>

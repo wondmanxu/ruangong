@@ -2,7 +2,8 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.8
     </div>
-    <strong>Copyright © 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+<#--    <strong>Copyright © 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights-->
+<#--    reserved.-->
+    <strong>©2024 计科软工10组</strong>
 </footer>
 <div class="control-sidebar-bg"></div>

@@ -31,7 +31,7 @@
                         <th>#</th>
                         <th>用户名</th>
                         <th>邮箱</th>
-                        <th>积分</th>
+<#--                        <th>积分</th>-->
                         <th>时间</th>
                         <th>操作</th>
                     </tr>
@@ -42,7 +42,7 @@
                             <td>${user.id}</td>
                             <td>${user.username!}</td>
                             <td>${user.email!}</td>
-                            <td>${user.score!0}</td>
+<#--                            <td>${user.score!0}</td>-->
                             <td>${user.inTime?datetime}</td>
                             <td>
                                 <#if sec.hasPermission("user:edit")>

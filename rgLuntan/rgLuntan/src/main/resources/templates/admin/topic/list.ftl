@@ -16,22 +16,22 @@
             <div class="box-header with-border">
                 <h3 class="box-title">话题列表</h3>
                 <span class="pull-right">
-          <#if sec.hasPermission("topic:index_all")>
-              <button onclick="index_all_topic()" class="btn btn-primary btn-xs">索引全部话题</button>&nbsp;
-          </#if>
-                    <#if sec.hasPermission("topic:delete_all_index")>
-                        <button onclick="delete_all_index()" class="btn btn-danger btn-xs">删除所有话题索引</button>
-                    </#if>
+<#--          <#if sec.hasPermission("topic:index_all")>-->
+<#--              <button onclick="index_all_topic()" class="btn btn-primary btn-xs">索引全部话题</button>&nbsp;-->
+<#--          </#if>-->
+<#--                    <#if sec.hasPermission("topic:delete_all_index")>-->
+<#--                        <button onclick="delete_all_index()" class="btn btn-danger btn-xs">删除所有话题索引</button>-->
+<#--                    </#if>-->
         </span>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <form action="/admin/topic/list" class="form-inline">
                     <div class="form-group" style="margin-bottom: 10px;">
-                        <input type="text" readonly id="startDate" name="startDate" value="${startDate!}"
-                               class="form-control" placeholder="开始时间">
-                        <input type="text" readonly id="endDate" name="endDate" value="${endDate!}"
-                               class="form-control" placeholder="结束时间">
+<#--                        <input type="text" readonly id="startDate" name="startDate" value="${startDate!}"-->
+<#--                               class="form-control" placeholder="开始时间">-->
+<#--                        <input type="text" readonly id="endDate" name="endDate" value="${endDate!}"-->
+<#--                               class="form-control" placeholder="结束时间">-->
                         <input type="text" name="username" value="${username!}" class="form-control" placeholder="用户名">
                         <button type="submit" class="btn btn-primary btn-sm">搜索</button>
                     </div>
@@ -66,14 +66,14 @@
                             </td>
                             <td>${topic.inTime!}</td>
                             <td>
-                                <#if sec.hasPermission("topic:index")>
-                                    <button onclick="index_topic('${topic.id}')" class="btn btn-xs btn-primary">索引
-                                    </button>
-                                </#if>
-                                <#if sec.hasPermission("topic:delete_index")>
-                                    <button onclick="delete_index('${topic.id}')" class="btn btn-xs btn-danger">删除索引
-                                    </button>
-                                </#if>
+<#--                                <#if sec.hasPermission("topic:index")>-->
+<#--                                    <button onclick="index_topic('${topic.id}')" class="btn btn-xs btn-primary">索引-->
+<#--                                    </button>-->
+<#--                                </#if>-->
+<#--                                <#if sec.hasPermission("topic:delete_index")>-->
+<#--                                    <button onclick="delete_index('${topic.id}')" class="btn btn-xs btn-danger">删除索引-->
+<#--                                    </button>-->
+<#--                                </#if>-->
                                 <#if sec.hasPermission("topic:top")>
                                     <button onclick="actionBtn('${topic.id}', 'top', this)"
                                             class="btn btn-xs btn-warning">
@@ -84,16 +84,16 @@
                                         </#if>
                                     </button>
                                 </#if>
-                                <#if sec.hasPermission("topic:good")>
-                                    <button onclick="actionBtn('${topic.id}', 'good', this)"
-                                            class="btn btn-xs btn-warning">
-                                        <#if topic.good>
-                                            取消加精
-                                        <#else>
-                                            加精
-                                        </#if>
-                                    </button>
-                                </#if>
+<#--                                <#if sec.hasPermission("topic:good")>-->
+<#--                                    <button onclick="actionBtn('${topic.id}', 'good', this)"-->
+<#--                                            class="btn btn-xs btn-warning">-->
+<#--                                        <#if topic.good>-->
+<#--                                            取消加精-->
+<#--                                        <#else>-->
+<#--                                            加精-->
+<#--                                        </#if>-->
+<#--                                    </button>-->
+<#--                                </#if>-->
                                 <#if sec.hasPermission("topic:edit")>
                                     <a href="/admin/topic/edit?id=${topic.id}" class="btn btn-xs btn-warning">编辑</a>
                                 </#if>
