@@ -22,7 +22,7 @@
 
                             </div>
                         </form>
-                        <button type="button" onclick="asyncTopicCount()" class="btn btn-xs btn-danger ml-3">同步话题数</button>
+<#--                        <button type="button" onclick="asyncTopicCount()" class="btn btn-xs btn-danger ml-3">同步话题数</button>-->
                     </div>
                     <script>
                         function asyncTopicCount() {

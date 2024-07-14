@@ -1,6 +1,6 @@
 site:
   datasource_driver: com.mysql.cj.jdbc.Driver
-  datasource_url: jdbc:mysql://8.140.205.210:3306/pybbs?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+  datasource_url: jdbc:mysql://8.140.205.210/luntan?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
   datasource_username: ruangong
   datasource_password: 123456
 
