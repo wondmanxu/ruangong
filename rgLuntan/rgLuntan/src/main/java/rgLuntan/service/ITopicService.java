@@ -50,6 +50,8 @@ public interface ITopicService {
 
     MyPage<Map<String, Object>> selectAllForAdmin(Integer pageNo, String startDate, String endDate, String username);
 
+    MyPage<Map<String, Object>> selectForAdmin(Integer pageNo, Integer userId, String startDate, String endDate, String username);
+
     // 查询今天新增的话题数
     int countToday();
 

@@ -16,6 +16,9 @@ public interface CommentMapper extends BaseMapper<Comment> {
 
     MyPage<Map<String, Object>> selectByUserId(MyPage<Map<String, Object>> iPage, @Param("userId") Integer userId);
 
+    MyPage<Map<String, Object>> selectForAdmin(MyPage<Map<String, Object>> iPage, @Param("adminUserId") Integer admUserId, @Param("startDate") String
+            startDate, @Param("endDate") String endDate, @Param("username") String username);
+
     MyPage<Map<String, Object>> selectAllForAdmin(MyPage<Map<String, Object>> iPage, @Param("startDate") String
             startDate, @Param("endDate") String endDate, @Param("username") String username);
 

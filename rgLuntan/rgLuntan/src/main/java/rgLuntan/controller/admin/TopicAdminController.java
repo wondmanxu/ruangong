@@ -3,6 +3,7 @@ package rgLuntan.controller.admin;
 import rgLuntan.exception.ApiAssert;
 import rgLuntan.model.Tag;
 import rgLuntan.model.Topic;
+import rgLuntan.model.AdminUser;
 import rgLuntan.service.IIndexedService;
 import rgLuntan.service.ITagService;
 import rgLuntan.service.ITopicService;
@@ -37,11 +38,14 @@ public class TopicAdminController extends BaseAdminController {
     @RequiresPermissions("topic:list")
     @GetMapping("/list")
     public String list(@RequestParam(defaultValue = "1") Integer pageNo, String startDate, String endDate, String username, Model model) {
+        AdminUser adu = getAdminUser();
         if (username != null) username = username.replace("\"", "").replace("'", "");
         if (StringUtils.isEmpty(startDate)) startDate = null;
         if (StringUtils.isEmpty(endDate)) endDate = null;
         if (StringUtils.isEmpty(username)) username = null;
-        MyPage<Map<String, Object>> page = topicService.selectAllForAdmin(pageNo, startDate, endDate, username);
+        MyPage<Map<String, Object>> page;
+        if(adu.getUserId() == null) page = topicService.selectAllForAdmin(pageNo, startDate, endDate, username);
+        else page = topicService.selectForAdmin(pageNo,adu.getUserId(), startDate, endDate, username);
         model.addAttribute("page", page);
         model.addAttribute("startDate", startDate);
         model.addAttribute("endDate", endDate);

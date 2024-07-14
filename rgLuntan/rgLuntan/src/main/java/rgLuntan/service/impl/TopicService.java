@@ -54,7 +54,9 @@ public class TopicService implements ITopicService {
         if (pageSize == null)
             pageSize = Integer.parseInt(systemConfigService.selectAllConfig().get("page_size").toString());
         MyPage<Map<String, Object>> page = new MyPage<>(pageNo, pageSize);
-        return topicMapper.searchBar(page, tab, forumsName, keyword);
+        page = topicMapper.searchBar(page, tab, forumsName, keyword);
+        tagService.selectTagsByTopicId(page);
+        return page;
     }
 
     @Override
@@ -235,6 +237,13 @@ public class TopicService implements ITopicService {
     }
 
     // ---------------------------- admin ----------------------------
+    @Override
+    public MyPage<Map<String, Object>> selectForAdmin(Integer pageNo, Integer userId, String startDate, String endDate, String username){
+        MyPage<Map<String, Object>> iPage = new MyPage<>(pageNo, Integer.parseInt((String) systemConfigService
+                .selectAllConfig().get("page_size")));
+        return topicMapper.selectForAdmin(iPage, userId, startDate, endDate, username);
+    }
+
 
     @Override
     public MyPage<Map<String, Object>> selectAllForAdmin(Integer pageNo, String startDate, String endDate, String

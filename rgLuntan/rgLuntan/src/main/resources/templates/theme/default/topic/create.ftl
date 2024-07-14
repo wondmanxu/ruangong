@@ -7,8 +7,11 @@
                 <div class="card-body">
                     <form action="" onsubmit="return false;" id="form" method="post">
                         <div class="form-group">
+                            <label for="title">课程</label>
                             <select class="form-control" id="forumsName" name="forumsName" aria-label="Search Bar">
-<#--                                <option value="">请选择课程</option>-->
+                                <#if forumsName?? && forumsName != "">
+                                    <option value="${forumsName}">${forumsName}</option>
+                                </#if>
                                 <#if forumsNames??>
                                     <#list forumsNames as forumsName>
                                         <option value="${forumsName}">${forumsName}</option>
@@ -113,6 +116,10 @@
                     err("请输入标题，且最大长度在120个字符以内");
                     return;
                 }
+                // if (!forumsName) {
+                //     err("请选择课程");
+                //     return;
+                // }
                 // if (!tags || tags.split(",").length > 5) {
                 //   err("请输入标签，且最多只能填5个");
                 //   return;

@@ -1,5 +1,6 @@
 package rgLuntan.controller.admin;
 
+import rgLuntan.model.AdminUser;
 import rgLuntan.model.Comment;
 import rgLuntan.model.Topic;
 import rgLuntan.service.ICommentService;
@@ -28,6 +29,7 @@ public class CommentAdminController extends BaseAdminController {
     @RequiresPermissions("comment:list")
     @GetMapping("/list")
     public String list(@RequestParam(defaultValue = "1") Integer pageNo, String startDate, String endDate, String username, Model model) {
+        AdminUser adu = getAdminUser();
         if (username != null) username = username.replace("\"", "").replace("'", "");
 //        startDate= SecurityUtil.sanitizeInput(startDate);
 //        endDate= SecurityUtil.sanitizeInput(endDate);
@@ -35,7 +37,9 @@ public class CommentAdminController extends BaseAdminController {
         if (StringUtils.isEmpty(startDate)) startDate = null;
         if (StringUtils.isEmpty(endDate)) endDate = null;
         if (StringUtils.isEmpty(username)) username = null;
-        MyPage<Map<String, Object>> page = commentService.selectAllForAdmin(pageNo, startDate, endDate, username);
+        MyPage<Map<String, Object>> page;
+        if(adu.getUserId() == null) page = commentService.selectAllForAdmin(pageNo, startDate, endDate, username);
+        else  page = commentService.selectForAdmin(pageNo,adu.getUserId(), startDate, endDate, username);
         model.addAttribute("page", page);
         model.addAttribute("startDate", startDate);
         model.addAttribute("endDate", endDate);

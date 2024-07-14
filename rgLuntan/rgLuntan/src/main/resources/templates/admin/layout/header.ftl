@@ -1,7 +1,7 @@
 <header class="main-header" style="position: fixed; width: 100%">
     <!-- Logo -->
     <a href="/admin/index" class="logo">
-        <span class="logo-mini"><b>Py</b>bbs</span>
+        <span class="logo-mini">后台</span>
         <span class="logo-lg"><b>选课论坛</b>后台</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->

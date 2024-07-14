@@ -242,6 +242,11 @@ public class CommentService implements ICommentService {
     }
 
     // ---------------------------- admin ----------------------------
+    @Override
+    public MyPage<Map<String, Object>> selectForAdmin(Integer pageNo, Integer admUserId, String startDate, String endDate, String username){
+        MyPage<Map<String, Object>> iPage = new MyPage<>(pageNo, Integer.parseInt((String) systemConfigService.selectAllConfig().get("page_size")));
+        return commentMapper.selectForAdmin(iPage,admUserId, startDate, endDate, username);
+    }
 
     @Override
     public MyPage<Map<String, Object>> selectAllForAdmin(Integer pageNo, String startDate, String endDate, String username) {

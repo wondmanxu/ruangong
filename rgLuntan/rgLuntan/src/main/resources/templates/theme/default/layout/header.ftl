@@ -24,7 +24,7 @@
                     <div class="input-group">
 <#--                        <input class="form-control" type="search" name="forumsName" placeholder="搜索课程" value="${forumsName!}"-->
 <#--                               required aria-label="Search Bar">-->
-                        <select class="form-control" name="forumsName" aria-label="Search Bar">
+                        <select class="form-control" name="forumsName" aria-label="Search Bar" onchange="saveToLocalStorage()">
                             <#if forumsName?? && forumsName != "">
                                 <option value="${forumsName}">${forumsName}</option>
                             <#else>
@@ -39,7 +39,7 @@
                             </#if>
                         </select>
                         <input class="form-control" type="search" name="keyword" placeholder="搜索帖子" value="${keyword!}"
-                               aria-label="Search">
+                               aria-label="Search" onchange="saveToLocalStorage()">
                         <div class="input-group-append">
                             <button class="btn btn-outline-success" type="submit">${i18n.getMessage("search")}</button>
                         </div>
@@ -80,5 +80,35 @@
             </ul>
         </div>
     </nav>
+    <script>
+        // Function to get value from localStorage or default value
+        function getLocalStorageOrDefault(key, defaultValue) {
+            return localStorage.getItem(key) || defaultValue;
+        }
 
+        // Set initial values from localStorage
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set the forumsName
+            const forumsName = getLocalStorageOrDefault('forumsName', '');
+            const forumsNameSelect = document.querySelector('select[name="forumsName"]');
+            if (forumsNameSelect) {
+                forumsNameSelect.value = forumsName;
+            }
+
+            // Set the keyword
+            const keyword = getLocalStorageOrDefault('keyword', '');
+            const keywordInput = document.querySelector('input[name="keyword"]');
+            if (keywordInput) {
+                keywordInput.value = keyword;
+            }
+        });
+
+        // Save the selected forumsName and keyword to localStorage on change
+        function saveToLocalStorage() {
+            const forumsName = document.querySelector('select[name="forumsName"]').value;
+            const keyword = document.querySelector('input[name="keyword"]').value;
+            localStorage.setItem('forumsName', forumsName);
+            localStorage.setItem('keyword', keyword);
+        }
+    </script>
 </#macro>

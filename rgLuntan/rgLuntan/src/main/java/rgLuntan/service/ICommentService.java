@@ -39,6 +39,8 @@ public interface ICommentService {
     // 查询用户的评论
     MyPage<Map<String, Object>> selectByUserId(Integer userId, Integer pageNo, Integer pageSize);
 
+    MyPage<Map<String, Object>> selectForAdmin(Integer pageNo, Integer admUserId, String startDate, String endDate, String username);
+
     MyPage<Map<String, Object>> selectAllForAdmin(Integer pageNo, String startDate, String endDate, String username);
 
     // 查询今天新增的话题数

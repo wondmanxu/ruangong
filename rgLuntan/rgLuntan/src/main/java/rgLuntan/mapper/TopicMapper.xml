@@ -66,6 +66,25 @@
         order by t.in_time desc
     </select>
 
+    <select id="selectForAdmin" resultType="map">
+        select t.*, u.username
+        from topic t
+        left join forum f on t.forum_id = f.id
+        left join user u on f.teacher_id = u.id
+        <where>
+            <if test="startDate != null and endDate != null">
+                t.in_time between #{startDate} and #{endDate}
+            </if>
+            <if test="username != null">
+                and u.username = #{username}
+            </if>
+            <if test="adminUserId != null">
+                and f.teacher_id = #{adminUserId}
+            </if>
+        </where>
+        order by t.in_time desc
+    </select>
+
     <select id="selectAllForAdmin" resultType="map">
         select t.*, u.username
         from topic t

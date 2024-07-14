@@ -1,12 +1,12 @@
 <#include "layout/layout.ftl"/>
 <@html page_title="首页" page_tab="index">
-    <#if active?? && active>
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            <strong>激活成功</strong>
-        </div>
-    </#if>
+<#--    <#if active?? && active>-->
+<#--        <div class="alert alert-success">-->
+<#--            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span-->
+<#--                        aria-hidden="true">&times;</span></button>-->
+<#--            <strong>激活成功</strong>-->
+<#--        </div>-->
+<#--    </#if>-->
     <div class="row">
         <div class="col-md-9">
             <div class="card">

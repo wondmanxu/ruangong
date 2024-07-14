@@ -16,6 +16,7 @@ public class AdminUser implements Serializable {
     private String password;
     private Date inTime;
     private Integer roleId;
+    private Integer userId;
 
     public Integer getId() {
         return id;
@@ -55,5 +56,13 @@ public class AdminUser implements Serializable {
 
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }
