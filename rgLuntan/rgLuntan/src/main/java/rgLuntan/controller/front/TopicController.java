@@ -1,13 +1,12 @@
 package rgLuntan.controller.front;
 
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 import rgLuntan.model.Collect;
 import rgLuntan.model.Tag;
 import rgLuntan.model.Topic;
 import rgLuntan.model.User;
-import rgLuntan.service.ICollectService;
-import rgLuntan.service.ITagService;
-import rgLuntan.service.ITopicService;
-import rgLuntan.service.IUserService;
+import rgLuntan.service.*;
 import rgLuntan.util.IpUtil;
 import rgLuntan.util.MyPage;
 import rgLuntan.util.SensitiveWordUtil;
@@ -39,6 +38,8 @@ public class TopicController extends BaseController {
     private IUserService userService;
     @Resource
     private ICollectService collectService;
+    @Resource
+    private IForumService forumService;
 
     // 话题详情
     @GetMapping("/{id}")
@@ -96,14 +97,27 @@ public class TopicController extends BaseController {
         return render("topic/edit");
     }
 
-    @GetMapping("/tag/{name}")
-    public String tag(@PathVariable String name, @RequestParam(defaultValue = "1") Integer pageNo, Model model) {
+    @GetMapping("/tag/{name1}")
+    public String tag(@PathVariable String name1,
+                      @RequestParam(defaultValue = "1") Integer pageNo,
+                      Model model){
+        // 去除 & 后面的内容
+        String[] tmp = name1.split("&");
+        String name = tmp[0];
+        String forumsName = " ";
+        if(tmp.length > 1){forumsName = name1.split("&")[1];}
+        String keyword = " ";
+        if(tmp.length > 2){keyword = name1.split("&")[2];}
         Tag tag = tagService.selectByName(name);
         Assert.notNull(tag, "标签不存在");
         // 查询标签关联的话题
-        MyPage<Map<String, Object>> iPage = tagService.selectTopicByTagId(tag.getId(), pageNo);
+        MyPage<Map<String, Object>> iPage = tagService.selectTopicByTagId(tag.getId(), forumsName, keyword, pageNo);
         model.addAttribute("tag", tag);
         model.addAttribute("page", iPage);
+        keyword = Jsoup.clean(keyword, Whitelist.basic());
+        forumsName = Jsoup.clean(forumsName, Whitelist.basic());
+        model.addAttribute("forumsName", forumsName.replace("\"", "").replace("'", ""));
+        model.addAttribute("keyword", keyword.replace("\"", "").replace("'", ""));
         return render("tag/tag");
     }
 }

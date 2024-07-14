@@ -7,6 +7,16 @@
                 <div class="card-body">
                     <form action="" onsubmit="return false;" id="form" method="post">
                         <div class="form-group">
+                            <select class="form-control" id="forumsName" name="forumsName" aria-label="Search Bar">
+<#--                                <option value="">请选择课程</option>-->
+                                <#if forumsNames??>
+                                    <#list forumsNames as forumsName>
+                                        <option value="${forumsName}">${forumsName}</option>
+                                    </#list>
+                                <#else>
+                                    <option value="">没有可选课程</option>
+                                </#if>
+                            </select>
                             <label for="title">标题</label>
                             <input type="text" name="title" id="title" class="form-control" placeholder="标题"/>
                         </div>
@@ -51,10 +61,10 @@
                         <div class="form-group">
                             <label for="content">内容</label>
                             <#if site?? && site.content_style?? && site.content_style == "MD">
-                                <span class="pull-right">
-                                    <a href="javascript:uploadFile('topic')">上传图片</a>&nbsp;
-<#--                                    <a href="javascript:uploadFile('video')">上传视频</a>-->
-                                </span>
+<#--                                <span class="pull-right">-->
+<#--                                    <a href="javascript:uploadFile('topic')">上传图片</a>&nbsp;-->
+<#--&lt;#&ndash;                                    <a href="javascript:uploadFile('video')">上传视频</a>&ndash;&gt;-->
+<#--                                </span>-->
                             </#if>
                             <#include "../components/editor.ftl"/>
                             <@editor _type="topic" style="${site.content_style!'MD'}"/>
@@ -73,9 +83,9 @@
             </div>
         </div>
         <div class="col-md-3 hidden-xs">
-            <#if site?? && site.content_style?? && site.content_style == "MD">
-                <#include "../components/markdown_guide.ftl"/>
-            </#if>
+<#--            <#if site?? && site.content_style?? && site.content_style == "MD">-->
+<#--                <#include "../components/markdown_guide.ftl"/>-->
+<#--            </#if>-->
             <#include "../components/create_topic_guide.ftl"/>
         </div>
     </div>
@@ -83,6 +93,7 @@
         $(function () {
             $("#btn").click(function () {
                 var title = $("#title").val();
+                var forumsName = $("#forumsName").val();
                 //var tag = $("#tag").val();
                 var content = window.editor ? window.editor.getDoc().getValue() : window._E.txt.html();
                 // var tags = $("#tags").val();
@@ -111,6 +122,7 @@
                 req("post", "/api/topic", {
                     title: title,
                     content: content,
+                    forumsName: forumsName,
                     //tag: tag,
                      tags: selectedTagsString,
                 }, "${_user.token!}", function (data) {

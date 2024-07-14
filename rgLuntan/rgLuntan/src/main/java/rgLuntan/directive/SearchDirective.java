@@ -26,12 +26,17 @@ public class SearchDirective implements TemplateDirectiveModel {
             templateDirectiveBody) throws TemplateException, IOException {
         Page<Map<String, Object>> page = new Page<>();
         String keyword = String.valueOf(map.get("keyword"));
+        String tab = String.valueOf(map.get("tab"));
+        String forumsName = String.valueOf(map.get("forumsName"));
         Integer pageNo = Integer.parseInt(map.get("pageNo").toString());
-        if (!StringUtils.isEmpty(keyword)) {
+
+//        if (!StringUtils.isEmpty(forumsName)) {
             Integer pageSize = Integer.parseInt(systemConfigService.selectAllConfig().get("page_size").toString());
-//      page = elasticSearchService.searchDocument(pageNo, pageSize, keyword, "title", "content");
-            page = topicService.search(pageNo, pageSize, keyword);
-        }
+            page = topicService.searchBar(pageNo, pageSize, tab, forumsName, keyword);
+//        }else if (!StringUtils.isEmpty(keyword)) {
+//            Integer pageSize = Integer.parseInt(systemConfigService.selectAllConfig().get("page_size").toString());
+//            page = topicService.search(pageNo, pageSize, keyword);
+//        }
 
         DefaultObjectWrapperBuilder builder = new DefaultObjectWrapperBuilder(Configuration.VERSION_2_3_28);
         environment.setVariable("page", builder.build().wrap(page));

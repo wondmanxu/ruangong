@@ -6,10 +6,10 @@
                 <div class="card-header">
                     <a href="/">主页</a> / <a href="/topic/${topic.id}">${topic.title}</a> / 编辑评论
                     <#if site?? && site.content_style?? && site.content_style == "MD">
-                        <span class="pull-right">
-                            <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|
-<#--                            <a href="javascript:uploadFile('video');">上传视频</a>-->
-                        </span>
+<#--                        <span class="pull-right">-->
+<#--                            <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|-->
+<#--&lt;#&ndash;                            <a href="javascript:uploadFile('video');">上传视频</a>&ndash;&gt;-->
+<#--                        </span>-->
                     </#if>
                 </div>
                 <#include "../components/editor.ftl"/>

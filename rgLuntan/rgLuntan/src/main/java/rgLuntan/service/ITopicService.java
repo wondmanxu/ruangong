@@ -9,6 +9,9 @@ import java.util.Map;
 
  
 public interface ITopicService {
+    // 按吧搜索
+    MyPage<Map<String, Object>> searchBar(Integer pageNo, Integer pageSize, String tab, String forumsName, String keyword);
+
     // 搜索
     MyPage<Map<String, Object>> search(Integer pageNo, Integer pageSize, String keyword);
 
@@ -25,7 +28,7 @@ public interface ITopicService {
     MyPage<Map<String, Object>> selectByUserId(Integer userId, Integer pageNo, Integer pageSize);
 
     // 保存话题
-    Topic insert(String title, String content, String tags, User user);
+    Topic insert(String title, String content, String tags, User user, Integer forumId);
 
     // 根据id查询话题
     Topic selectById(Integer id);

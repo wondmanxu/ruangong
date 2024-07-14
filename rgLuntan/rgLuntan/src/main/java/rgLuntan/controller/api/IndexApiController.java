@@ -57,7 +57,7 @@ public class IndexApiController extends BaseApiController {
         if (tag == null) {
             return error("标签不存在");
         } else {
-            MyPage<Map<String, Object>> iPage = tagService.selectTopicByTagId(tag.getId(), pageNo);
+            MyPage<Map<String, Object>> iPage = tagService.selectTopicByTagId(tag.getId()," ", " ", pageNo);
             Map<String, Object> result = new HashMap<>();
             result.put("tag", tag);
             result.put("page", iPage);

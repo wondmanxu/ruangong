@@ -102,7 +102,7 @@ public class Topic implements Serializable {
     }
 
     public void setForumId(Integer forumId) {
-        this.forumId = this.forumId;
+        this.forumId = forumId;
     }
 
     public Integer getUserId() { return userId; }

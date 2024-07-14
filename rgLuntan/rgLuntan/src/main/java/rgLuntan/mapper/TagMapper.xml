@@ -11,20 +11,38 @@
         test_id AS testId, name, age, test_type AS testType, role, phone
     </sql>-->
 
-    <select id="selectTopicByTagId" resultType="map">
-        select t.*, u.username, u.avatar
-        from topic_tag tt
-                 left join topic t on tt.topic_id = t.id
-                 left join tag tag on tt.tag_id = tag.id
-                 left join user u on t.user_id = u.id
-        where tag.id = #{tagId}
-        order by tag.topic_count desc
-    </select>
+<!--    <select id="selectTopicByTagId" resultType="map">-->
+<!--        select t.*, u.username, u.avatar-->
+<!--        from topic_tag tt-->
+<!--                 left join topic t on tt.topic_id = t.id-->
+<!--                 left join tag tag on tt.tag_id = tag.id-->
+<!--                 left join user u on t.user_id = u.id-->
+<!--        where tag.id = #{tagId}-->
+<!--        order by tag.topic_count desc-->
+<!--    </select>-->
 
     <select id="countToday" resultType="integer">
         select count(1)
         from tag
         where in_time between curdate() and date_add(curdate(), interval 1 day)
+    </select>
+
+    <select id="selectTopicByTagId" resultType="map">
+        select t.*, u.username, u.avatar
+        from topic_tag tt
+        left join topic t on tt.topic_id = t.id
+        left join tag tag on tt.tag_id = tag.id
+        left join user u on t.user_id = u.id
+        left join forum f on t.forum_id = f.id
+        where tag.id = #{tagId}
+<!--        <if test="forumsName != null and forumsName != '' and forumsName != ' ' ">-->
+<!--            and f.forumsName = #{forumsName}-->
+<!--        </if>-->
+<!--        <if test="keyword != null and keyword != '' and keyword != ' '">-->
+<!--            and (t.title like concat('%', #{keyword}, '%')-->
+<!--            or t.content like concat('%', #{keyword}, '%'))-->
+<!--        </if>-->
+        order by tag.topic_count desc
     </select>
 
 </mapper>

@@ -50,6 +50,14 @@ public class TopicService implements ITopicService {
     private IndexedService indexedService;
 
     @Override
+    public MyPage<Map<String, Object>> searchBar(Integer pageNo, Integer pageSize, String tab, String forumsName, String keyword) {
+        if (pageSize == null)
+            pageSize = Integer.parseInt(systemConfigService.selectAllConfig().get("page_size").toString());
+        MyPage<Map<String, Object>> page = new MyPage<>(pageNo, pageSize);
+        return topicMapper.searchBar(page, tab, forumsName, keyword);
+    }
+
+    @Override
     public MyPage<Map<String, Object>> search(Integer pageNo, Integer pageSize, String keyword) {
         if (pageSize == null)
             pageSize = Integer.parseInt(systemConfigService.selectAllConfig().get("page_size").toString());
@@ -109,8 +117,9 @@ public class TopicService implements ITopicService {
 
     // 保存话题
     @Override
-    public Topic insert(String title, String content, String tags, User user) {
+    public Topic insert(String title, String content, String tags, User user, Integer forumId) {
         Topic topic = new Topic();
+        topic.setForumId(forumId);
         topic.setTitle(Jsoup.clean(title, Whitelist.simpleText()));
         topic.setStyle(systemConfigService.selectAllConfig().get("content_style"));
         topic.setContent(content);

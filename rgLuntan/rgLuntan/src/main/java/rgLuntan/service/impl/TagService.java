@@ -136,11 +136,19 @@ public class TagService implements ITagService {
 
     // 查询标签关联的话题
     @Override
-    public MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId, Integer pageNo) {
+    public MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId, String forumsName, String keyword, Integer pageNo) {
         MyPage<Map<String, Object>> iPage = new MyPage<>(pageNo, Integer.parseInt(systemConfigService.selectAllConfig()
                 .get("page_size").toString()));
-        return tagMapper.selectTopicByTagId(iPage, tagId);
+        return tagMapper.selectTopicByTagId(iPage, tagId,forumsName,keyword);
     }
+
+//    // 查询标签关联的话题
+//    @Override
+//    public MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId,  Integer pageNo) {
+//        MyPage<Map<String, Object>> iPage = new MyPage<>(pageNo, Integer.parseInt(systemConfigService.selectAllConfig()
+//                .get("page_size").toString()));
+//        return tagMapper.selectTopicByTagId(iPage, tagId);
+//    }
 
     // 查询标签列表
     @Override

@@ -83,7 +83,7 @@
                         添加一条新评论
                         <span class="pull-right">
                             <#if site?? && site.content_style?? && site.content_style == "MD">
-                                <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|
+<#--                                <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|-->
 <#--                                <a href="javascript:uploadFile('video');">上传视频</a>&nbsp;|-->
                             </#if>
                             <a href="javascript:;" id="goTop">回到顶部</a>

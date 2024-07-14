@@ -3,6 +3,7 @@ package rgLuntan.controller.front;
 import rgLuntan.model.Code;
 import rgLuntan.model.User;
 import rgLuntan.service.ICodeService;
+import rgLuntan.service.IForumService;
 import rgLuntan.service.ISystemConfigService;
 import rgLuntan.service.IUserService;
 import rgLuntan.util.CookieUtil;
@@ -22,8 +23,9 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Locale;
+import java.util.List;
 
- 
+
 @Controller
 public class IndexController extends BaseController {
 
@@ -37,16 +39,24 @@ public class IndexController extends BaseController {
     private IUserService userService;
     @Resource
     private ICodeService codeService;
+    @Resource
+    private IForumService forumService;
 
     // 首页
     @GetMapping({"/", "/index", "/index.html"})
     public String index(@RequestParam(defaultValue = "all") String tab, @RequestParam(defaultValue = "1") Integer
             pageNo, Boolean active, Model model) {
+
         model.addAttribute("tab", tab);
         model.addAttribute("active", active);
         model.addAttribute("pageNo", pageNo);
 
         return render("index");
+    }
+
+    @GetMapping("/layout")
+    public String top100(Model model) {
+        return render("layout");
     }
 
     @GetMapping("/top100")
@@ -63,8 +73,12 @@ public class IndexController extends BaseController {
     }
 
     @GetMapping("/tags")
-    public String tags(@RequestParam(defaultValue = "1") Integer pageNo, Model model) {
+    public String tags(@RequestParam(defaultValue = "1") Integer pageNo, @RequestParam String forumsName,  @RequestParam String keyword, Model model) {
         model.addAttribute("pageNo", pageNo);
+        keyword = Jsoup.clean(keyword, Whitelist.basic());
+        forumsName = Jsoup.clean(forumsName, Whitelist.basic());
+        model.addAttribute("forumsName", forumsName.replace("\"", "").replace("'", ""));
+        model.addAttribute("keyword", keyword.replace("\"", "").replace("'", ""));
         return render("tag/tags");
     }
 
@@ -106,10 +120,13 @@ public class IndexController extends BaseController {
     }
 
     @GetMapping("/search")
-    public String search(@RequestParam(defaultValue = "1") Integer pageNo, @RequestParam String keyword, Model model) {
+    public String search(@RequestParam(defaultValue = "1") Integer pageNo, @RequestParam(defaultValue = "all") String tab, @RequestParam String forumsName,  @RequestParam String keyword, Model model) {
         model.addAttribute("pageNo", pageNo);
+        model.addAttribute("tab", tab);
 //        model.addAttribute("keyword", SecurityUtil.sanitizeInput(keyword));
         keyword = Jsoup.clean(keyword, Whitelist.basic());
+        forumsName = Jsoup.clean(forumsName, Whitelist.basic());
+        model.addAttribute("forumsName", forumsName.replace("\"", "").replace("'", ""));
         model.addAttribute("keyword", keyword.replace("\"", "").replace("'", ""));
         return render("search");
     }

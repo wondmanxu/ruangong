@@ -27,7 +27,10 @@ public interface ITagService {
     void reduceTopicCount(Integer id);
 
     // 查询标签关联的话题
-    MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId, Integer pageNo);
+    MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId, String forumsName, String keyword, Integer pageNo);
+
+    // 查询标签关联的话题
+    //MyPage<Map<String, Object>> selectTopicByTagId(Integer tagId, Integer pageNo);
 
     // 查询标签列表
     IPage<Tag> selectAll(Integer pageNo, Integer pageSize, String name);

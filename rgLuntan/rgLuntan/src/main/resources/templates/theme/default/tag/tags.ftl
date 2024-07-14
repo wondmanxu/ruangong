@@ -4,14 +4,14 @@
         <div class="col-md-9">
             <div class="card">
                 <div class="card-body">
-                    <@tag_tags pageNo=pageNo pageSize=40>
+                    <@tag_tags pageNo=pageNo pageSize=40 forumsName=forumsName keyword=keyword>
                         <div class="row" style="overflow: hidden;">
                             <#list page.records as tag>
                                 <div class="col-md-3 tag-item">
 <#--                                    <#if tag.icon??>-->
 <#--                                        <img src="${tag.icon}" width="10" class="sponsor-tag-img" alt="${tag.name}">-->
 <#--                                    </#if>-->
-                                    <a href="/topic/tag/${tag.name}">
+                                    <a href="/topic/tag/${tag.name}&${forumsName!}&${keyword!}">
                                         <span class="badge badge-info">${tag.name}</span>
                                     </a>
 <#--                                    <span class="text-muted">x ${tag.topicCount}</span>-->

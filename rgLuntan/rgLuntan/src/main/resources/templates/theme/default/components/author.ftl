@@ -14,8 +14,8 @@
 <#--                <p>积分：${topicUser.score}</p>-->
             </div>
         </div>
-        <div style="color: #7A7A7A; font-size: 12px;margin-top:5px;">
-            <i>${(topicUser.bio!"这家伙很懒，什么都没有留下")?html}</i>
-        </div>
+<#--        <div style="color: #7A7A7A; font-size: 12px;margin-top:5px;">-->
+<#--            <i>${(topicUser.bio!"这家伙很懒，什么都没有留下")?html}</i>-->
+<#--        </div>-->
     </div>
 </div>

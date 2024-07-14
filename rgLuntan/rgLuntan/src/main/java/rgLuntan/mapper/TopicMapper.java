@@ -23,5 +23,7 @@ public interface TopicMapper extends BaseMapper<Topic> {
 
     int countToday();
 
+    MyPage<Map<String, Object>> searchBar(MyPage<Map<String, Object>> iPage, @Param("tab") String tab, @Param("forumsName") String forumsName, @Param("keyword") String keyword);
+
     MyPage<Map<String, Object>> search(MyPage<Map<String, Object>> iPage, @Param("keyword") String keyword);
 }

@@ -29,7 +29,7 @@
                     <#if tags && topic.tags??>
                         <span>•</span>
                         <#list topic.tags as tag>
-                            <a href="/topic/tag/${tag.name}"><span class="badge badge-info">${tag.name}</span></a>
+                            <a><span class="badge badge-info">${tag.name}</span></a>
                         </#list>
                     </#if>
                 </div>

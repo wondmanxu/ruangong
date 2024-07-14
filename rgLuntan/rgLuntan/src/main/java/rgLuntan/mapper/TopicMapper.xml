@@ -27,8 +27,11 @@
                 and date(t.in_time) &gt;= date_sub(curdate(), interval 7 day)
             </if>
         </where>
-        <if test="tab == 'all' or tab == 'newest' or tab == 'noanswer' or tab == 'good'">
+        <if test="tab == 'all' or tab == 'noanswer' or tab == 'good'">
             order by t.top desc, t.in_time desc
+        </if>
+        <if test="tab == 'newest'">
+            order by t.in_time desc
         </if>
         <if test="tab == 'hot'">
             order by t.comment_count desc, t.in_time desc
@@ -82,6 +85,66 @@
         select count(1)
         from topic t
         where t.in_time between curdate() and date_add(curdate(), interval 1 day)
+    </select>
+
+<!--    <select id="searchBar" resultType="map">-->
+<!--        select t.id, t.title, t.content-->
+<!--        from topic t-->
+<!--        JOIN forum f ON t.forum_id = f.id-->
+<!--        <where>-->
+<!--            f.forumsName = #{forumsName}-->
+<!--            AND (-->
+<!--            t.title like concat(concat('%',#{keyword}),'%')-->
+<!--            OR t.content like concat(concat('%',#{keyword}),'%')-->
+<!--            )-->
+<!--        </where>-->
+<!--        order by t.in_time desc-->
+<!--    </select>-->
+
+    <select id="searchBar" resultType="map">
+        select t.*, u.username, u.avatar
+        from topic t
+        left join user u on t.user_id = u.id
+        left join forum f on t.forum_id = f.id
+        <where>
+            <!-- Existing filters -->
+            <if test="tab == 'good'">
+                t.good = true
+            </if>
+            <if test="tab == 'noanswer'">
+                t.comment_count = 0
+            </if>
+            <if test="tab == 'hot'">
+                date(t.in_time) &lt;= date_add(curdate(), interval 1 day)
+                and date(t.in_time) &gt;= date_sub(curdate(), interval 7 day)
+            </if>
+
+            <if test="tab == 'hot' and forumsName != null and forumsName != ''">
+                AND
+            </if>
+
+            <!-- New filters for forumsName and keyword -->
+            <if test="forumsName != null and forumsName != ''">
+                f.forumsName = #{forumsName}
+            </if>
+            <if test="keyword != null and keyword != ''">
+                AND (
+                t.title like concat('%', #{keyword}, '%')
+                OR t.content like concat('%', #{keyword}, '%')
+                )
+            </if>
+        </where>
+
+        <!-- Sorting conditions -->
+        <if test="tab == 'all' or tab == 'noanswer' or tab == 'good'">
+            order by t.top desc, t.in_time desc
+        </if>
+        <if test="tab == 'newest'">
+            order by t.in_time desc
+        </if>
+        <if test="tab == 'hot'">
+            order by t.comment_count desc, t.in_time desc
+        </if>
     </select>
 
     <select id="search" resultType="map">

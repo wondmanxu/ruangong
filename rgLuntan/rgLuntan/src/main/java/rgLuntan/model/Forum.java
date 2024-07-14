@@ -15,6 +15,7 @@ public class Forum implements Serializable {
     private String forumsName;
     private String description;
     private Date createDate;
+    private Integer teacher_id;
 
     public Integer getId() {
         return id;
@@ -46,5 +47,13 @@ public class Forum implements Serializable {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public Integer getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(Integer teacher_id) {
+        this.teacher_id = teacher_id;
     }
 }

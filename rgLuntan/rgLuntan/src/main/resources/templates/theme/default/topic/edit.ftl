@@ -14,10 +14,10 @@
                         <div class="form-group">
                             <label for="content">内容</label>
                             <#if site?? && site.content_style?? && site.content_style == "MD">
-                                <span class="pull-right">
-                                    <a href="javascript:uploadFile('topic')">上传图片</a>&nbsp;
-<#--                                    <a href="javascript:uploadFile('video')">上传视频</a>-->
-                                </span>
+<#--                                <span class="pull-right">-->
+<#--                                    <a href="javascript:uploadFile('topic')">上传图片</a>&nbsp;-->
+<#--&lt;#&ndash;                                    <a href="javascript:uploadFile('video')">上传视频</a>&ndash;&gt;-->
+<#--                                </span>-->
                             </#if>
                             <#include "../components/editor.ftl"/>
                             <@editor _type="topic" _content="${topic.content!}" style="${topic.style!'MD'}"/>
