@@ -7,7 +7,7 @@
         </button>
         <ul class="navbar-nav">
             <li class="nav-item <#if page_tab == "index">active</#if>">
-                <a href="/" class="nav-link">
+                <a href="/" class="nav-link" onclick="clearForumsName()">
                     <i class="fa fa-home"></i> ${i18n.getMessage("index")}
                 </a>
             </li>
@@ -66,13 +66,13 @@
 <#--                    </li>-->
                     <li class="nav-item">
                         <a href="javascript:if(confirm('确定要登出吗？登出了就没办法发帖回帖了哦!'))window.location.href='/logout'"
-                           class="nav-link">
+                           class="nav-link" onclick="clearForumsName()">
                             <i class="fa fa-sign-out"></i> ${i18n.getMessage("logout")}
                         </a>
                     </li>
                 <#else>
                     <li class="nav-item <#if page_tab == "login">active</#if>">
-                        <a href="/login" class="nav-link">
+                        <a href="/login" class="nav-link" onclick="clearForumsName()">
                             <i class="fa fa-sign-in"></i> ${i18n.getMessage("login")}
                         </a>
                     </li>
@@ -109,6 +109,12 @@
             const keyword = document.querySelector('input[name="keyword"]').value;
             localStorage.setItem('forumsName', forumsName);
             localStorage.setItem('keyword', keyword);
+        }
+        function clearForumsName() {
+            const forumsName = document.querySelector('select[name="forumsName"]').value;
+            const keyword = document.querySelector('input[name="keyword"]').value;
+            localStorage.setItem('forumsName', "");
+            localStorage.setItem('keyword', "");
         }
     </script>
 </#macro>
