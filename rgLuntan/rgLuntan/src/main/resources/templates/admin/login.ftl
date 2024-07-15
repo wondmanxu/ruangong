@@ -37,11 +37,11 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="javascript:;"><b>ADMIN</b>${site.name!}</a>
+        <a href="javascript:;"><b>ADMIN</b>选课系统</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">${site.name!} 管理平台登录</p>
+        <p class="login-box-msg">选课系统 管理平台登录</p>
         <#if error??>
             <div class="text-red">${error!}</div>
         </#if>
@@ -63,9 +63,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-8">
-                    <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label for="rememberMe">记住我</label>
-                </div>
+<#--                <div class="col-xs-8">-->
+<#--                    <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label for="rememberMe">记住我</label>-->
+<#--                </div>-->
                 <!-- /.col -->
                 <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-adminUser"></i> 登录</button>

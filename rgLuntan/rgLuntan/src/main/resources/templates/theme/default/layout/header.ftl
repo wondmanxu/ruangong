@@ -29,11 +29,6 @@
 <#--                        <input class="form-control" type="search" name="forumsName" placeholder="搜索课程" value="${forumsName!}"-->
 <#--                               required aria-label="Search Bar">-->
                         <select class="form-control" name="forumsName" aria-label="Search Bar" onchange="saveToLocalStorage()">
-<#--                            <#if forumsName?? && forumsName != "">-->
-<#--                                <option value="${forumsName}">${forumsName}</option>-->
-<#--                            <#else>-->
-<#--                                <option value="">请选择课程</option>-->
-<#--                            </#if>-->
                             <option value="">请选择课程</option>
                             <#if forumsNames??>
                                 <#list forumsNames as forumsName>
@@ -96,8 +91,11 @@
             // Set the forumsName
             const forumsName = getLocalStorageOrDefault('forumsName', '');
             const forumsNameSelect = document.querySelector('select[name="forumsName"]');
-            if (forumsNameSelect) {
-                forumsNameSelect.value = forumsName;
+            console.log(forumsName);
+            if(forumsName && forumsName !==''){
+                if (forumsNameSelect) {
+                    forumsNameSelect.value = forumsName;
+                }
             }
 
             // Set the keyword
@@ -108,28 +106,34 @@
             }
 
             // 更新页面上显示的forumsName
-            // updateNavbarBrand(forumsName);
+            updateNavbarBrand(forumsName);
         });
 
-        // // 更新导航栏中显示的forumsName
-        // function updateNavbarBrand(forumsName) {
-        //     const navbarBrand = document.querySelector('.navbar-brand');
-        //     if (forumsName != null && forumsName !== ''){
-        //         let tmp = '/search?forumsName=' + forumsName + '&keyword= ';
-        //         navbarBrand.href = tmp;
-        //         navbarBrand.textContent = forumsName;
-        //     } else {
-        //         navbarBrand.href = '/';
-        //         navbarBrand.textContent = '选课论坛';
-        //     }
-        // }
+        // 更新导航栏中显示的forumsName
+        function updateNavbarBrand(forumsName) {
+            const navbarBrand = document.querySelector('.navbar-brand');
+            if(navbarBrand.textContent == '选课论坛'){
+                if (forumsName != null && forumsName !== ''){
+                    let tmp = '/search?forumsName=' + forumsName + '&keyword= ';
+                    navbarBrand.href = tmp;
+                    navbarBrand.textContent = forumsName;
+                } else {
+                    navbarBrand.href = '/';
+                    navbarBrand.textContent = '选课论坛';
+                }
+            }
+        }
 
 
         // Save the selected forumsName and keyword to localStorage on change
         function saveToLocalStorage() {
             const forumsName = document.querySelector('select[name="forumsName"]').value;
             const keyword = document.querySelector('input[name="keyword"]').value;
-            localStorage.setItem('forumsName', forumsName);
+            console.log("save:"+forumsName);
+            if(forumsName && forumsName !== '' && forumsName !== '请选择课程'){
+                localStorage.setItem('forumsName', forumsName);
+            }
+
             localStorage.setItem('keyword', keyword);
         }
         function clearForumsName() {

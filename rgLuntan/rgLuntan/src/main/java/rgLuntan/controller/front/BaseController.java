@@ -46,12 +46,12 @@ public class BaseController {
         return forumService.getAllForums();
     }
 
-//    @ModelAttribute
-//    public void addAttributes(@RequestParam(required = false) String forumsName,
-//                              @RequestParam(required = false) String keyword,
-//                              Model model) {
-//        model.addAttribute("forumsName", forumsName);
-//        model.addAttribute("keyword", keyword);
-//    }
+    @ModelAttribute
+    public void addAttributes(@RequestParam(required = false) String forumsName,
+                              @RequestParam(required = false) String keyword,
+                              Model model) {
+        model.addAttribute("forumsName", forumsName);
+        model.addAttribute("keyword", keyword);
+    }
 
 }
