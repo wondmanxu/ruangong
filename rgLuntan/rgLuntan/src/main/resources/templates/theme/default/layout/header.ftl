@@ -1,6 +1,10 @@
 <#macro header page_tab>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">选课论坛</a>
+        <#if forumsName?? && forumsName != "">
+            <a class="navbar-brand" href="/search?forumsName=${forumsName!}&keyword=''">${forumsName}</a>
+        <#else>
+            <a class="navbar-brand" href="/" onclick="clearForumsName()">选课论坛</a>
+        </#if>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,11 +29,12 @@
 <#--                        <input class="form-control" type="search" name="forumsName" placeholder="搜索课程" value="${forumsName!}"-->
 <#--                               required aria-label="Search Bar">-->
                         <select class="form-control" name="forumsName" aria-label="Search Bar" onchange="saveToLocalStorage()">
-                            <#if forumsName?? && forumsName != "">
-                                <option value="${forumsName}">${forumsName}</option>
-                            <#else>
-                                <option value="">请选择课程</option>
-                            </#if>
+<#--                            <#if forumsName?? && forumsName != "">-->
+<#--                                <option value="${forumsName}">${forumsName}</option>-->
+<#--                            <#else>-->
+<#--                                <option value="">请选择课程</option>-->
+<#--                            </#if>-->
+                            <option value="">请选择课程</option>
                             <#if forumsNames??>
                                 <#list forumsNames as forumsName>
                                     <option value="${forumsName}">${forumsName}</option>
