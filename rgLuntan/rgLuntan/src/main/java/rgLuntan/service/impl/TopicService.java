@@ -129,7 +129,7 @@ public class TopicService implements ITopicService {
         topic.setUserId(user.getId());
         topic.setTop(false);
         topic.setGood(false);
-        topic.setView(1);
+        topic.setView(0);
         topic.setCollectCount(0);
         topic.setCommentCount(0);
         topicMapper.insert(topic);

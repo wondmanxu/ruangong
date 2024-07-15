@@ -33,7 +33,7 @@
                                 <span>•</span>
                                 <span>${model.formatDate(topic.inTime)}</span>
                                 <span>•</span>
-                                <span>${topic.view!1}次点击</span>
+                                <span>${topic.view!1}次浏览</span>
                                 <#if _user?? && topic.userId == _user.id>
                                     <span>•</span>
                                     <span><a href="/topic/edit/${topic.id}">编辑</a></span>

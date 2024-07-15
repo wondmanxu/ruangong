@@ -4,7 +4,7 @@
             <a href="/user/${topic.username!}" class="mr-3"><img src="${topic.avatar!}" class="avatar" alt=""></a>
             <div class="media-body">
                 <div class="title">
-                    <a href="/topic/${topic.id}">${topic.title!?html}</a>
+                    <a href="/topic/${topic.id}">${topic.title!}</a>
                 </div>
                 <div class="gray">
                     <#--<#if (topic.up - topic.down) &gt; 0>

@@ -30,11 +30,12 @@
     </select>
 
     <select id="selectForAdmin" resultType="map">
-        select c.*, t.title, t.id as topicId, u.username
+        select c.*, t.title, t.id as topicId, u2.username
         from comment c
         left join topic t on c.topic_id = t.id
         left join forum f on t.forum_id = f.id
-        left join user u on f.teacher_id = u.id
+        left join user u1 on f.teacher_id = u1.id
+        LEFT JOIN user u2 ON c.user_id = u2.id
         <where>
             <if test="startDate != null and endDate != null">
                 c.in_time between #{startDate} and #{endDate}

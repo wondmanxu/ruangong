@@ -67,22 +67,26 @@
     </select>
 
     <select id="selectForAdmin" resultType="map">
-        select t.*, u.username
-        from topic t
-        left join forum f on t.forum_id = f.id
-        left join user u on f.teacher_id = u.id
+        SELECT t.*, u2.username
+        FROM topic t
+        LEFT JOIN forum f ON t.forum_id = f.id
+        LEFT JOIN user u ON f.teacher_id = u.id  -- 保留这个JOIN以获取论坛教师的信息（如果需要）
+        LEFT JOIN user u2 ON t.user_id = u2.id  -- 新增的JOIN，用于从topic.user_id获取username
         <where>
+            <!-- 如果需要按topic的创建时间范围过滤 -->
             <if test="startDate != null and endDate != null">
-                t.in_time between #{startDate} and #{endDate}
+                t.in_time BETWEEN #{startDate} AND #{endDate}
             </if>
+            <!-- 如果需要按topic的user_id对应的username过滤 -->
             <if test="username != null">
-                and u.username = #{username}
+                AND u2.username = #{username}
             </if>
+            <!-- 如果需要按论坛教师的user_id过滤（保留原始条件） -->
             <if test="adminUserId != null">
-                and f.teacher_id = #{adminUserId}
+                AND f.teacher_id = #{adminUserId}
             </if>
         </where>
-        order by t.in_time desc
+        ORDER BY t.in_time DESC
     </select>
 
     <select id="selectAllForAdmin" resultType="map">
