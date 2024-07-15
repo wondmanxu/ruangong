@@ -58,7 +58,7 @@
                         <th>#</th>
 <#--                        <th>图标</th>-->
                         <th>名称</th>
-                        <th>话题数</th>
+<#--                        <th>话题数</th>-->
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -68,7 +68,7 @@
                             <td>${tag.id}</td>
 <#--                            <td><img src="${tag.icon!}" width="30" alt=""></td>-->
                             <td><a href="/topic/tag/${tag.name!}" target="_blank">${tag.name!}</a></td>
-                            <td>${tag.topicCount!0}</td>
+<#--                            <td>${tag.topicCount!0}</td>-->
                             <td>
                                 <#if sec.hasPermission('tag:edit')>
                                     <a href="/admin/tag/edit?id=${tag.id}" class="btn btn-xs btn-warning">编辑</a>

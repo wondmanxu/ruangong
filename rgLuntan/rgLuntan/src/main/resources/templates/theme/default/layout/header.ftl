@@ -106,7 +106,24 @@
             if (keywordInput) {
                 keywordInput.value = keyword;
             }
+
+            // 更新页面上显示的forumsName
+            // updateNavbarBrand(forumsName);
         });
+
+        // // 更新导航栏中显示的forumsName
+        // function updateNavbarBrand(forumsName) {
+        //     const navbarBrand = document.querySelector('.navbar-brand');
+        //     if (forumsName != null && forumsName !== ''){
+        //         let tmp = '/search?forumsName=' + forumsName + '&keyword= ';
+        //         navbarBrand.href = tmp;
+        //         navbarBrand.textContent = forumsName;
+        //     } else {
+        //         navbarBrand.href = '/';
+        //         navbarBrand.textContent = '选课论坛';
+        //     }
+        // }
+
 
         // Save the selected forumsName and keyword to localStorage on change
         function saveToLocalStorage() {
